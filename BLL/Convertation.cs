@@ -80,7 +80,8 @@ namespace BLL
                 Volume = color.Volume,
                 QuantityGeneralVolume = color.QuantityGeneralVolume,
                 QuantityBottles = color.QuantityBottles,
-                Description= color.Description
+                Description= color.Description,
+                Color= color.Color
             };
             return bllColor;
         }

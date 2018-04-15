@@ -52,6 +52,107 @@ namespace BLL
             return bllShampoosList;
         }
 
+        public List<BllBalsam> GetListBalsam()
+        {
+            DalFunction function = new DalFunction();
+            List<BllBalsam> bllBalsamList = new List<BllBalsam>();
+
+            bllBalsamList = function.GetBalsam().Select(x => Convertation.ConvertBalsamToBllBalsam(x)).ToList();
+
+            return bllBalsamList;
+        }
+        public List<BllColor> GetListColor()
+        {
+            DalFunction function = new DalFunction();
+            List<BllColor> bllBaColorList = new List<BllColor>();
+
+            bllBaColorList = function.GetColor().Select(x => Convertation.ConvertColorToBllColor(x)).ToList();
+
+            return bllBaColorList;
+        }
+        public List<BllFoundation> GetListFoundation()
+        {
+            DalFunction function = new DalFunction();
+            List<BllFoundation> bllBaFoundationList = new List<BllFoundation>();
+
+            bllBaFoundationList = function.GetFoundation().Select(x => Convertation.ConvertFoundationToBllFoundation(x)).ToList();
+
+            return bllBaFoundationList;
+        }
+
+        public List<BllLaque> GetListLaque()
+        {
+            DalFunction function = new DalFunction();
+            List<BllLaque> bllBaLaqueList = new List<BllLaque>();
+
+            bllBaLaqueList = function.GetLaque().Select(x => Convertation.ConvertLaqueToBllLaque(x)).ToList();
+
+            return bllBaLaqueList;
+        }
+        public List<BllLipstick> GetListLipstick()
+        {
+            DalFunction function = new DalFunction();
+            List<BllLipstick> bllBaLipstickList = new List<BllLipstick>();
+
+            bllBaLipstickList = function.GetLipstick().Select(x => Convertation.ConvertLipstickToBllLipstick(x)).ToList();
+
+            return bllBaLipstickList;
+        }
+        public List<BllMascara> GetListMascara()
+        {
+            DalFunction function = new DalFunction();
+            List<BllMascara> bllBaMascaraList = new List<BllMascara>();
+
+            bllBaMascaraList = function.GetMascara().Select(x => Convertation.ConvertMascaraToBllMascara(x)).ToList();
+
+            return bllBaMascaraList;
+        }
+        public List<BllNailBase> GetListNailBase()
+        {
+            DalFunction function = new DalFunction();
+            List<BllNailBase> bllBaseList = new List<BllNailBase>();
+
+            bllBaseList = function.GetNailBase().Select(x => Convertation.ConvertBaseToBllBase(x)).ToList();
+
+            return bllBaseList;
+        }
+
+        public List<BllNailPolish> GetListNailPolish()
+        {
+            DalFunction function = new DalFunction();
+            List<BllNailPolish> bllPolishList = new List<BllNailPolish>();
+
+            bllPolishList = function.GetNailPolish().Select(x => Convertation.ConvertPolishToBllPolish(x)).ToList();
+
+            return bllPolishList;
+        }
+        public List<BllNailTop> GetListNailTop()
+        {
+            DalFunction function = new DalFunction();
+            List<BllNailTop> bllTopList = new List<BllNailTop>();
+
+            bllTopList = function.GetNailTop().Select(x => Convertation.ConvertTopToBllTop(x)).ToList();
+
+            return bllTopList;
+        }
+        public List<BllPowder> GetListPowder()
+        {
+            DalFunction function = new DalFunction();
+            List<BllPowder> bllPowderList = new List<BllPowder>();
+
+            bllPowderList = function.GetPowder().Select(x => Convertation.ConvertPowderToBllPowder(x)).ToList();
+
+            return bllPowderList;
+        }
+        public List<BllShadows> GetListShadow()
+        {
+            DalFunction function = new DalFunction();
+            List<BllShadows> bllShadowList = new List<BllShadows>();
+
+            bllShadowList = function.GetShadow().Select(x => Convertation.ConvertShadowToBllShadow(x)).ToList();
+
+            return bllShadowList;
+        }
         public void DeleteFromGrid(int id)
         {
             DalFunction function = new DalFunction();
