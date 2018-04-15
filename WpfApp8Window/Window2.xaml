@@ -1,0 +1,90 @@
+﻿<Controls:MetroWindow  x:Class="WpfApp8Window.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8Window"
+        mc:Ignorable="d"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        WindowStartupLocation="CenterScreen"
+        Title="Window2" Height="700" Width="1000">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#E0F7FA" />
+                <GradientStop Color="#B2EBF2" Offset="1"/>
+                <GradientStop Color="#80DEEA" Offset="0.546"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="50*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonOpenMenu"  Click="ok" >
+                <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
+            </Button>
+            <materialDesign:PackIcon Grid.Column="1" Kind="ArrowLeft" Width="20" Height="25" VerticalAlignment="Center" />
+            <Label Grid.Column="2" HorizontalContentAlignment="Left" VerticalAlignment="Center">Choose the option</Label>
+        </Grid>
+        <Grid Grid.Row="1" Background="White">
+            <ContentControl Name="control"></ContentControl>
+            <Controls:SplitView x:Name="split" DisplayMode="Overlay"  CompactPaneLength="75" OpenPaneLength="200">
+                <Controls:SplitView.Pane>
+                    <ListBox x:Name="ListViewMenu" SelectionMode="Single" SelectionChanged="ListViewMenu_SelectionChanged">
+                        <ListBoxItem x:Name="logout">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Logout"   Height="25" Width="20" Margin="10"  />
+                                </TextBlock>
+                                <TextBlock  Text="Log Out" Margin="13" ></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="materials">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Pencil"  Height="25" Width="20" Margin="10"/>
+                                </TextBlock>
+                                <TextBlock  Text="Materials"  Margin="13"></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="statistics">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="ArrowUpBoldCircle"  Height="25" Width="20" Margin="10"/>
+                                </TextBlock>
+                                <TextBlock  Text="Statistics"  Margin="13"></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="actions">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Calendar"  Height="25" Width="20" Margin="10"/>
+                                </TextBlock>
+                                <TextBlock  Text="Actions"  Margin="13"></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem >
+                        <ListBoxItem x:Name="users">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="AccountPlus"  Height="25" Width="20" Margin="10"/>
+                                </TextBlock>
+                                <TextBlock  Text="Add/Delete User"  Margin="13"></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </Controls:SplitView.Pane>
+                <!--<Controls:SplitView.Content>
+                    <Frame></Frame>
+                </Controls:SplitView.Content>-->
+            </Controls:SplitView>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

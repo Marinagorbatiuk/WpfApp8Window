@@ -1,0 +1,94 @@
+﻿<Controls:MetroWindow x:Class="WpfApp8Window.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8Window"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Window3" Height="700" Width="1000">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#E0F7FA" />
+                <GradientStop Color="#B2EBF2" Offset="1"/>
+                <GradientStop Color="#80DEEA" Offset="0.546"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="50*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonOpenMenu" Click="MenuUser" >
+                <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
+            </Button>
+            <materialDesign:PackIcon Grid.Column="1" Kind="ArrowLeft" Width="20" Height="25" VerticalAlignment="Center" />
+            <Label Grid.Column="2" HorizontalContentAlignment="Left" VerticalAlignment="Center">Choose the option</Label>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ContentControl Name="ControlUser"></ContentControl>
+            <Controls:SplitView x:Name="splitUser" DisplayMode="Overlay"  CompactPaneLength="75" OpenPaneLength="200">
+                <Controls:SplitView.Pane >
+                    <ListBox x:Name="ListViewMenuUser" SelectionMode="Single"  SelectionChanged="ListViewMenu_SelectionChangedUser">
+                        <ListBoxItem x:Name="logoutUser">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Logout"   Height="25" Width="20" Margin="10"  />
+                                </TextBlock>
+                                <TextBlock  Text="Log Out" Margin="13" ></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="HairCut">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Square" Foreground="Red"  Height="25" Width="20" Margin="10"  />
+                                </TextBlock>
+                                <TextBlock  Text="Hair Cut" Margin="13" ></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="HairColoring">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Square" Foreground="Yellow"   Height="25" Width="20" Margin="10"  />
+                                </TextBlock>
+                                <TextBlock  Text="Hair Coloring" Margin="13" ></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="MakeUp">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Square" Foreground="Green"  Height="25" Width="20" Margin="10"  />
+                                </TextBlock>
+                                <TextBlock  Text="Make Up" Margin="13" ></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:Name="Manicure">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock >                                    
+                                     <materialDesign:PackIcon Kind="Square" Foreground="DarkBlue"  Height="25" Width="20" Margin="10"  />
+                                </TextBlock>
+                                <TextBlock  Text="Manicure" Margin="13" ></TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </Controls:SplitView.Pane>
+            </Controls:SplitView>
+        </Grid>
+    </Grid>
+   
+</Controls:MetroWindow>
