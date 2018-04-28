@@ -14,7 +14,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="1"></RowDefinition>
         </Grid.RowDefinitions>
-       
+
         <Grid Grid.Row="1">
             <Rectangle Height="280" VerticalAlignment="Top">
                 <Rectangle.Fill>
@@ -40,6 +40,9 @@
             </Grid>
             <Button Click="ok" Width="150" HorizontalAlignment="Center" Background="#B2EBF2" VerticalAlignment="Bottom" Margin="60" Content="Ok"/>
             <Image Source="photo/house-icon.png" Width="100" Height="100" VerticalAlignment="Top" Margin="30"/>
+            <!--<ProgressBar Background="Transparent" BorderBrush="Transparent"  x:Name="progbar" HorizontalAlignment="Center" Height="20" Margin="35,427,32,0" VerticalAlignment="Top" Width="277"/>-->
+            <Controls:ProgressRing x:Name="ring" Visibility="Hidden"  HorizontalAlignment="Center" Height="30" Margin="35,427,32,0" VerticalAlignment="Top" Width="40"></Controls:ProgressRing>
+          
         </Grid>
     </Grid>
 </Controls:MetroWindow>

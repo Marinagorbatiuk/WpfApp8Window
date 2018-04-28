@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Dal;
+
 namespace BLL
 {
     public class BusinessLogic
@@ -157,6 +159,34 @@ namespace BLL
         {
             DalFunction function = new DalFunction();
             function.Delete(id);
+        }
+
+        public List<string> AddShampoo(BllShampoo shampoo)
+        {
+            DalFunction function = new DalFunction();
+            DTOShampoo tOShampoo = null;
+            List<string> mistakes = new List<string>();
+            var context = new ValidationContext(shampoo);
+            var ValidationResult = new List<ValidationResult>();
+            if(!Validator.TryValidateObject(shampoo,context,ValidationResult, true) )
+            {
+                foreach(var item in ValidationResult)
+                {
+                    string tmp = item.MemberNames.ToArray()[0];
+                    mistakes.Add(tmp);
+                }
+            }
+            else
+            {
+                tOShampoo= Convertation.ConvertToBllShampooFromDTO(shampoo);
+
+                
+            }
+            return mistakes;
+
+
+
+
         }
     }
 

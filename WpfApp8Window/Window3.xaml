@@ -34,13 +34,16 @@
                 <ColumnDefinition Width="50*"></ColumnDefinition>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonOpenMenu" Click="MenuUser" >
+            <Button x:Name="ButtonOpenMenu" Click="MenuUser" Background="Transparent" BorderBrush="Transparent"  >
                 <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
             </Button>
             <materialDesign:PackIcon Grid.Column="1" Kind="ArrowLeft" Width="20" Height="25" VerticalAlignment="Center" />
-            <Label Grid.Column="2" HorizontalContentAlignment="Left" VerticalAlignment="Center">Choose the option</Label>
+            <Label Grid.Column="2" HorizontalContentAlignment="Left" VerticalAlignment="Center" FontSize="20" FontFamily="Tempus Sans ITC">Choose the option</Label>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Grid.RowSpan="2">
+            <Grid.Background>
+                <ImageBrush  ImageSource="photo/w.jpg" />
+            </Grid.Background>
             <ContentControl Name="ControlUser"></ContentControl>
             <Controls:SplitView x:Name="splitUser" DisplayMode="Overlay"  CompactPaneLength="75" OpenPaneLength="200">
                 <Controls:SplitView.Pane >

@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using BLL;
+using System.Windows.Media.Animation;
+
 namespace WpfApp8Window
 {
     /// <summary>
@@ -40,10 +42,18 @@ namespace WpfApp8Window
             string password = pass.Password;
             string login = log.Text;
 
+
+            //progbar.IsIndeterminate = false;          
+            //Duration duration = new Duration(TimeSpan.FromSeconds(8));
+            //DoubleAnimation doubleanimation = new DoubleAnimation(100.0, duration);
+            //progbar.BeginAnimation(ProgressBar.ValueProperty, doubleanimation);
+
+            ring.Visibility = Visibility.Visible;
             BllWorkPosition position =  await Task.Run(() =>
             {
                 BusinessLogic bll = new BusinessLogic();
                 BllWorkPosition bllWork = new BllWorkPosition();
+                //ring.Visibility = Visibility.Visible;
 
                 bllWork = bll.BllGetUser(login, password);
                 return bllWork;
@@ -51,6 +61,7 @@ namespace WpfApp8Window
 
             List<BllWorkPosition> listPositions = await Task.Run(() =>
             {
+                //ring.Visibility = Visibility.Visible;
                 BusinessLogic bll = new BusinessLogic();
                 List<BllWorkPosition> positions = bll.GetListPositions();
                 return positions;
@@ -58,6 +69,7 @@ namespace WpfApp8Window
 
             if (position.Name == listPositions.Where(x => x.Name == "Admin").Single().Name)
             {
+                //ring.Visibility = Visibility.Visible;
                 Window2 window = new Window2();
                 App.Current.MainWindow = window;
                 this.Close();
@@ -65,6 +77,7 @@ namespace WpfApp8Window
             }
             else if (position.Name == listPositions.Where(x => x.Name == "Employee").Single().Name)
             {
+                //ring.Visibility = Visibility.Visible;
                 Window3 window = new Window3();
                 App.Current.MainWindow = window;
                 this.Close();
@@ -72,6 +85,7 @@ namespace WpfApp8Window
             }
             else
             {
+                //ring.Visibility = Visibility.Visible;
                 MessageBox.Show("Test");
             }
 

@@ -42,7 +42,7 @@ namespace Dal
             context.Staffs.AddRange(listStaff);
             context.SaveChanges();
 
-            List<Shampoo> listProductsShampoo = new List<Shampoo>();
+            List<Material> listProductsShampoo = new List<Material>();
             Shampoo productShampoo = new Shampoo()//shampoo
             {
                 Name = "Keratin Shampoo",
@@ -69,7 +69,7 @@ namespace Dal
             listProductsShampoo.Add(productShampoo);
             context.Materials.AddRange(listProductsShampoo);
 
-            List<HairColor> listProductsColor = new List<HairColor>();
+            List<Material> listProductsColor = new List<Material>();
             HairColor productColor = new HairColor()
             {
                 Name = "De Luxe",
@@ -160,7 +160,7 @@ namespace Dal
             listProductsColor.Add(productColor);
             context.Materials.AddRange(listProductsColor);
 
-            List<Balsam> listProductsBalsam = new List<Balsam>();
+            List<Material> listProductsBalsam = new List<Material>();
             Balsam productBalsam = new Balsam()
             {
                 Name = "Prima Blonde Balm",
@@ -199,7 +199,7 @@ namespace Dal
             listProductsBalsam.Add(productBalsam);
             context.Materials.AddRange(listProductsBalsam);
 
-            List<Laque> listProductsLaque = new List<Laque>();
+            List<Material> listProductsLaque = new List<Material>();
             Laque productLaque = new Laque()
 
             {
@@ -215,7 +215,7 @@ namespace Dal
             listProductsLaque.Add(productLaque);
             context.Materials.AddRange(listProductsLaque);
 
-            List<Foundation> listProductsFountation = new List<Foundation>();
+            List<Material> listProductsFountation = new List<Material>();
             Foundation productFoundation = new Foundation()
             {
                 Name = "24h Infaillible",
@@ -244,7 +244,7 @@ namespace Dal
             listProductsFountation.Add(productFoundation);
             context.Materials.AddRange(listProductsFountation);
 
-            List<Shadows> listProductsShadow = new List<Shadows>();
+            List<Material> listProductsShadow = new List<Material>();
             Shadows productsShadow = new Shadows()
 
             {
@@ -300,7 +300,7 @@ namespace Dal
             listProductsShadow.Add(productsShadow);
             context.Materials.AddRange(listProductsShadow);
 
-            List<Lipstick> listProductLipstick = new List<Lipstick>();
+            List<Material> listProductLipstick = new List<Material>();
             Lipstick productLipstick = new Lipstick()
 
             {
@@ -331,7 +331,7 @@ namespace Dal
             context.Materials.AddRange(listProductLipstick);
 
 
-            List<Powder> listProductPowder = new List<Powder>();
+            List<Material> listProductPowder = new List<Material>();
             Powder productPowder = new Powder()
 
             {
@@ -372,7 +372,7 @@ namespace Dal
             listProductPowder.Add(productPowder);
             context.Materials.AddRange(listProductPowder);
 
-            List<Mascara> listProductMascara = new List<Mascara>();
+            List<Material> listProductMascara = new List<Material>();
             Mascara productMascara = new Mascara()
 
             {
@@ -387,7 +387,7 @@ namespace Dal
             listProductMascara.Add(productMascara);
             context.Materials.AddRange(listProductMascara);
 
-            List<NailBase> listProductsBase = new List<NailBase>();
+            List<Material> listProductsBase = new List<Material>();
             NailBase productBase = new NailBase()
 
             {
@@ -403,7 +403,7 @@ namespace Dal
             listProductsBase.Add(productBase);
             context.Materials.AddRange(listProductsBase);
 
-            List<NailTop> listProductTop = new List<NailTop>();
+            List<Material> listProductTop = new List<Material>();
             NailTop productTop = new NailTop()
 
             {
@@ -418,7 +418,7 @@ namespace Dal
             listProductTop.Add(productTop);
             context.Materials.AddRange(listProductTop);
 
-            List<NailPolish> listProductPolish = new List<NailPolish>();
+            List<Material> listProductPolish = new List<Material>();
             NailPolish productPolish = new NailPolish()
 
             {
@@ -496,12 +496,20 @@ namespace Dal
             context.Materials.AddRange(listProductPolish);
 
             context.SaveChanges();
-         
+
+            List<Material> listfromManicure = new List<Material>();
+            listfromManicure.AddRange(listProductPolish);
+
+            List<Material> listFromHairCut = new List<Material>();
+            listFromHairCut.AddRange(listProductsShampoo);
+            listFromHairCut.AddRange(listProductsLaque);
+            listFromHairCut.AddRange(listProductsBalsam);
+
             Service hairCut = new Service()
             {
                 Name = "HairCut",
                 Price = 80,
-                Materials = new List<Material> { productShampoo, productBalsam, productLaque }
+                Materials = listFromHairCut
             };
             Service hairColor = new Service()
             {
@@ -519,10 +527,11 @@ namespace Dal
             {
                 Name = "Manicure",
                 Price = 170,
-                Materials = new List<Material> { productTop, productPolish, productBase }
+                Materials = listfromManicure
             };
             context.Services.AddRange(new List<Service> { hairCut, hairColor, makeUp, manicure });
             context.SaveChanges();
+            
         }
 
 

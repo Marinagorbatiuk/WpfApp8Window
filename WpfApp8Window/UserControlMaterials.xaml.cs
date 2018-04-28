@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BLL;
+
 namespace WpfApp8Window
 {
     /// <summary>
@@ -28,7 +28,15 @@ namespace WpfApp8Window
 
         private void Add(object sender, RoutedEventArgs e)
         {
-
+            foreach (var item in StockRoom.Items)
+            {
+                if ((item as TabItem).IsSelected)
+                {
+                    BusinessLogic bll = new BusinessLogic();
+                    //bll.AddShampoo();
+                }
+            }
+            
         }
 
         private void buyProduct(object sender, RoutedEventArgs e)
@@ -39,7 +47,6 @@ namespace WpfApp8Window
         private void Delete(object sender, RoutedEventArgs e)
         {
           
-
             foreach (var item in StockRoom.Items)
             {
                 if((item as TabItem).IsSelected)

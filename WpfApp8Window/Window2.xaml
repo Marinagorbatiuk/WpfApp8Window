@@ -28,21 +28,27 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="50*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonOpenMenu"  Click="ok" >
+            
+            <Button x:Name="ButtonOpenMenu"  Click="ok" Background="Transparent" BorderBrush="Transparent" >
                 <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
             </Button>
             <materialDesign:PackIcon Grid.Column="1" Kind="ArrowLeft" Width="20" Height="25" VerticalAlignment="Center" />
-            <Label Grid.Column="2" HorizontalContentAlignment="Left" VerticalAlignment="Center">Choose the option</Label>
+            <Label Grid.Column="2" HorizontalContentAlignment="Left" VerticalAlignment="Center" FontSize="20" FontFamily="Tempus Sans ITC">Choose the option</Label>
         </Grid>
-        <Grid Grid.Row="1" Background="White">
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <ImageBrush  ImageSource="photo/w.jpg" />
+            </Grid.Background>
+
             <ContentControl Name="control"></ContentControl>
             <Controls:SplitView x:Name="split" DisplayMode="Overlay"  CompactPaneLength="75" OpenPaneLength="200">
+                
                 <Controls:SplitView.Pane>
                     <ListBox x:Name="ListViewMenu" SelectionMode="Single" SelectionChanged="ListViewMenu_SelectionChanged">
                         <ListBoxItem x:Name="logout">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock >                                    
-                                     <materialDesign:PackIcon Kind="Logout"   Height="25" Width="20" Margin="10"  />
+                                     <materialDesign:PackIcon Kind="Logout"   Height="25" Width="20" Margin="10"  /> 
                                 </TextBlock>
                                 <TextBlock  Text="Log Out" Margin="13" ></TextBlock>
                             </StackPanel>

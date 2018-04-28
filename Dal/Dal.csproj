@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DalFunction.cs" />
+    <Compile Include="DTODalMaterials.cs" />
     <Compile Include="Models\Material.cs" />
     <Compile Include="Models\ModelBeauty.cs" />
     <Compile Include="Models\MyInitializer.cs" />

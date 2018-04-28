@@ -176,5 +176,16 @@
       <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo\Welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo\W.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

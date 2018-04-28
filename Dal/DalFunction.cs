@@ -9,6 +9,7 @@ namespace Dal
 {
     public class DalFunction
     {
+       // ModelBeauty model = new ModelBeauty();
         public Staff GetUser(string login, string passWord)
         {
             Staff staff = null;
@@ -45,12 +46,13 @@ namespace Dal
                 return workPosition;
         }
 
-        public List<Shampoo> GetShampoo()
+        public List<DTOShampoo> GetShampoo()
         {
-            List<Shampoo> shampoo = new List<Shampoo>();
+            List<DTOShampoo> shampoo = new List<DTOShampoo>();
             using (ModelBeauty model = new ModelBeauty())
             {
-                shampoo = model.Materials.Where(x => (x is Shampoo)).Select(y=>(y as Shampoo)).ToList();
+                var tmpshampo = model.Materials.Where(x => (x is Shampoo)).Select(y => (y as Shampoo)).ToList();
+                shampoo = tmpshampo.Select(x=> DalConvertation.ConvertShampooFromEntityToDTO(x)).ToList();
             }
 
                 return shampoo;
@@ -172,6 +174,21 @@ namespace Dal
                 model.Materials.Remove(model.Materials.Where(x => x.Id == id).First());
                 model.SaveChanges();
             }
+        }
+
+        public void AddShampooToDB(Shampoo shampoos)
+        {
+        //    Shampoo shampoos = new Shampoo();
+            using (ModelBeauty model = new ModelBeauty())
+            {
+                //shampoos = model.Materials.Add(model.Materials.Where(x=>(x is Shampoo)).Select(y=>(y as Shampoo)).First());
+                //shampoos= model.Materials.Add(model.Materials.Where(x => (x is Shampoo)).First());
+                model.Materials.Add(shampoos);
+                
+                model.SaveChanges();
+               
+            }
+          // return shampoos;
         }
     }
 }

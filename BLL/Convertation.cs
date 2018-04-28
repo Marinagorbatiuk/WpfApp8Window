@@ -25,6 +25,16 @@ namespace BLL
             return bllStaff;
         }
 
+        /// <summary>
+        /// hello
+        /// </summary>
+        /// <param name="position"> fffffffff</param>
+        /// <my>
+        /// dghgdhd
+        /// </my>
+        /// Hello:
+        /// dfhgdhgdh
+        /// <returns>myposst</returns>
         public static BllWorkPosition ConvertPositionToBllPosition(WorkPosition position)
         {
           //  MessageBox.Show("Test");
@@ -38,7 +48,7 @@ namespace BLL
             return workPosition;
         }
 
-        public static BllShampoo ConvertShampooToBllShampoo(Shampoo shampoo)
+        public static BllShampoo ConvertShampooToBllShampoo(DTOShampoo shampoo)
         {
             BllShampoo bllShampoo = new BllShampoo()
             {
@@ -52,6 +62,23 @@ namespace BLL
                 QuantityBottles=shampoo.QuantityBottles
             };
             return bllShampoo;
+        }
+
+        public static DTOShampoo ConvertToBllShampooFromDTO(BllShampoo shampoo)
+        {
+            DTOShampoo dTOShampoo = new DTOShampoo()
+            {
+                Id = shampoo.Id,
+                Name = shampoo.Name,
+                Brand = shampoo.Brand,
+                Description = shampoo.Description,
+                Price = shampoo.Price,
+                Volume = shampoo.Volume,
+                QuantityGeneralVolume = shampoo.QuantityGeneralVolume,
+                QuantityBottles = shampoo.QuantityBottles,
+                 Color=string.Empty                
+            };
+            return dTOShampoo;
         }
 
         public static BllBalsam ConvertBalsamToBllBalsam(Balsam balsam)
