@@ -55,7 +55,7 @@ namespace WpfApp8Window
                     BusinessLogic bll = new BusinessLogic();
                     bll.DeleteFromGrid ((((item as TabItem).Content as DataGrid).SelectedItem as BllMaterials).Id);
                     GridShampoo.ItemsSource = bll.GetListShampoo();
-                    GridShampoo.Columns[0].DisplayIndex = GridShampoo.Columns.Count() - 1;
+                   // GridShampoo.Columns[0].DisplayIndex = GridShampoo.Columns.Count() - 1;
                     GridBalsam.ItemsSource = bll.GetListBalsam();
                     GridColor.ItemsSource = bll.GetListColor();
                     //GridColor.Columns[0].DisplayIndex = GridColor.Columns.Count() - 1;
@@ -78,7 +78,7 @@ namespace WpfApp8Window
             BusinessLogic bll = new BusinessLogic();
             //bll.GetListShampoo();
             GridShampoo.ItemsSource = bll.GetListShampoo();
-            GridShampoo.Columns[0].DisplayIndex = GridShampoo.Columns.Count() - 1;
+            //GridShampoo.Columns[0].DisplayIndex = GridShampoo.Columns.Count() - 1;
 
             GridBalsam.ItemsSource = bll.GetListBalsam();
 

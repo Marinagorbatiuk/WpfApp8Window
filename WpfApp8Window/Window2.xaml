@@ -91,6 +91,17 @@
                     <Frame></Frame>
                 </Controls:SplitView.Content>-->
             </Controls:SplitView>
+           
+            <!--<materialDesign:DialogHost x:Name="Dialog" IsOpen="True" Margin="50 80 50 80 ">
+                <materialDesign:DialogHost.DataContext>
+                    <StackPanel Margin="15" Orientation="Vertical">
+                        <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                            Style="{DynamicResource MaterialDesignFlatButton}"
+                                CommandTarget="{Binding ElementName=Dialog}">yes</Button>
+                        <Button >no</Button>
+                    </StackPanel>
+                </materialDesign:DialogHost.DataContext>
+            </materialDesign:DialogHost>-->
         </Grid>
     </Grid>
 </Controls:MetroWindow>

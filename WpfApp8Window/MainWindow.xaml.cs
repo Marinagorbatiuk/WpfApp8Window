@@ -13,8 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-using BLL;
+
 using System.Windows.Media.Animation;
+
 
 namespace WpfApp8Window
 {
@@ -26,27 +27,21 @@ namespace WpfApp8Window
         public MainWindow()
         {
             InitializeComponent();
+            ModelBeauty modelBeauty = new ModelBeauty();
+            foreach(var item in modelBeauty.WorkPositions)
+            {
+                MessageBox.Show(item.Id.ToString());
+            }
         }
 
         private async void ok(object sender, RoutedEventArgs e)
         {
-            // BllWorkPosition position= LoginMethod(log.Text, pass.Password);
-            //BusinessLogic bll = new BusinessLogic();
-            //BllWorkPosition bllWork = new BllWorkPosition();
-            // Task<List<BllWorkPosition>> listPositions = GetWorkerJobPosition();
-            //listPositions.Start();
-            //  MessageBox.Show("Pre wait");
-            // listPositions.Wait();
-            //   MessageBox.Show("Post wait");
+          
 
             string password = pass.Password;
             string login = log.Text;
 
 
-            //progbar.IsIndeterminate = false;          
-            //Duration duration = new Duration(TimeSpan.FromSeconds(8));
-            //DoubleAnimation doubleanimation = new DoubleAnimation(100.0, duration);
-            //progbar.BeginAnimation(ProgressBar.ValueProperty, doubleanimation);
 
             ring.Visibility = Visibility.Visible;
             BllWorkPosition position =  await Task.Run(() =>

@@ -37,6 +37,7 @@ namespace WpfApp8Window
                 App.Current.MainWindow = main;
                 this.Close();
                 main.Show();
+
             }
             if (materials.IsSelected)
             { UserControlMaterials materials = new UserControlMaterials();

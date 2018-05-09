@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace Dal
 {
-  public  class WorkPosition
+  public  class Services
     {
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public virtual ICollection<Staff> Staff { get; set; }
+        [Required]
+        public decimal Price { get; set; }
+        public virtual ICollection<Materials> Materials { get; set; }
+
     }
 }

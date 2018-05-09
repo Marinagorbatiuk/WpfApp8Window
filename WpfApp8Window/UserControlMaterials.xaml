@@ -68,7 +68,14 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         </DataGrid>-->
         <TabControl x:Name="StockRoom"  Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="7" Grid.RowSpan="15" TabStripPlacement="Left"  Background="Ivory" >
             <TabItem Style="{DynamicResource MenuLevel2}"   Header="Shampoo" >
-                <DataGrid x:Name="GridShampoo" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridShampoo" AutoGenerateColumns="True" IsReadOnly="True">
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                    <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                    <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                    <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Balsam">
                 <DataGrid x:Name="GridBalsam" AutoGenerateColumns="True" IsReadOnly="True" ></DataGrid>

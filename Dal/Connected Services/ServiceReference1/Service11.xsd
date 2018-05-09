@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="StaffWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkPosition" nillable="true" type="tns:WorkPositionWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StaffWCF" nillable="true" type="tns:StaffWCF" />
+  <xs:complexType name="WorkPositionWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Staff" nillable="true" type="tns:ArrayOfStaffWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkPositionWCF" nillable="true" type="tns:WorkPositionWCF" />
+  <xs:complexType name="ArrayOfStaffWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StaffWCF" nillable="true" type="tns:StaffWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStaffWCF" nillable="true" type="tns:ArrayOfStaffWCF" />
+  <xs:complexType name="ArrayOfWorkPositionWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPositionWCF" nillable="true" type="tns:WorkPositionWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPositionWCF" nillable="true" type="tns:ArrayOfWorkPositionWCF" />
+  <xs:complexType name="ArrayOfBalsamWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalsamWCF" nillable="true" type="tns:BalsamWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBalsamWCF" nillable="true" type="tns:ArrayOfBalsamWCF" />
+  <xs:complexType name="BalsamWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BalsamWCF" nillable="true" type="tns:BalsamWCF" />
+  <xs:complexType name="MaterialsWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BllServices" nillable="true" type="tns:ArrayOfServicesWCF" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QuantityBottles" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityGeneralVolume" type="xs:double" />
+      <xs:element minOccurs="0" name="Volume" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaterialsWCF" nillable="true" type="tns:MaterialsWCF" />
+  <xs:complexType name="ArrayOfServicesWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServicesWCF" nillable="true" type="tns:ServicesWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServicesWCF" nillable="true" type="tns:ArrayOfServicesWCF" />
+  <xs:complexType name="ServicesWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WCFMaterials" nillable="true" type="tns:ArrayOfMaterialsWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServicesWCF" nillable="true" type="tns:ServicesWCF" />
+  <xs:complexType name="ArrayOfMaterialsWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaterialsWCF" nillable="true" type="tns:MaterialsWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaterialsWCF" nillable="true" type="tns:ArrayOfMaterialsWCF" />
+  <xs:complexType name="ArrayOfShampooWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShampooWCF" nillable="true" type="tns:ShampooWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShampooWCF" nillable="true" type="tns:ArrayOfShampooWCF" />
+  <xs:complexType name="ShampooWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShampooWCF" nillable="true" type="tns:ShampooWCF" />
+  <xs:complexType name="ArrayOfLaqueWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LaqueWCF" nillable="true" type="tns:LaqueWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLaqueWCF" nillable="true" type="tns:ArrayOfLaqueWCF" />
+  <xs:complexType name="LaqueWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LaqueWCF" nillable="true" type="tns:LaqueWCF" />
+  <xs:complexType name="ArrayOfColorWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ColorWCF" nillable="true" type="tns:ColorWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColorWCF" nillable="true" type="tns:ArrayOfColorWCF" />
+  <xs:complexType name="ColorWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ColorWCF" nillable="true" type="tns:ColorWCF" />
+  <xs:complexType name="ArrayOfFoundationWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FoundationWCF" nillable="true" type="tns:FoundationWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFoundationWCF" nillable="true" type="tns:ArrayOfFoundationWCF" />
+  <xs:complexType name="FoundationWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FoundationWCF" nillable="true" type="tns:FoundationWCF" />
+  <xs:complexType name="ArrayOfPowderWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PowderWCF" nillable="true" type="tns:PowderWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPowderWCF" nillable="true" type="tns:ArrayOfPowderWCF" />
+  <xs:complexType name="PowderWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PowderWCF" nillable="true" type="tns:PowderWCF" />
+  <xs:complexType name="ArrayOfShadowsWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShadowsWCF" nillable="true" type="tns:ShadowsWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShadowsWCF" nillable="true" type="tns:ArrayOfShadowsWCF" />
+  <xs:complexType name="ShadowsWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShadowsWCF" nillable="true" type="tns:ShadowsWCF" />
+  <xs:complexType name="ArrayOfMascaraWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MascaraWCF" nillable="true" type="tns:MascaraWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMascaraWCF" nillable="true" type="tns:ArrayOfMascaraWCF" />
+  <xs:complexType name="MascaraWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MascaraWCF" nillable="true" type="tns:MascaraWCF" />
+  <xs:complexType name="ArrayOfLipstickWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LipstickWCF" nillable="true" type="tns:LipstickWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLipstickWCF" nillable="true" type="tns:ArrayOfLipstickWCF" />
+  <xs:complexType name="LipstickWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LipstickWCF" nillable="true" type="tns:LipstickWCF" />
+  <xs:complexType name="ArrayOfNailTopWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NailTopWCF" nillable="true" type="tns:NailTopWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNailTopWCF" nillable="true" type="tns:ArrayOfNailTopWCF" />
+  <xs:complexType name="NailTopWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NailTopWCF" nillable="true" type="tns:NailTopWCF" />
+  <xs:complexType name="ArrayOfNailBaseWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NailBaseWCF" nillable="true" type="tns:NailBaseWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNailBaseWCF" nillable="true" type="tns:ArrayOfNailBaseWCF" />
+  <xs:complexType name="NailBaseWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NailBaseWCF" nillable="true" type="tns:NailBaseWCF" />
+  <xs:complexType name="ArrayOfNailPolishWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NailPolishWCF" nillable="true" type="tns:NailPolishWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNailPolishWCF" nillable="true" type="tns:ArrayOfNailPolishWCF" />
+  <xs:complexType name="NailPolishWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NailPolishWCF" nillable="true" type="tns:NailPolishWCF" />
+</xs:schema>

@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61591/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61591/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61591/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetUserAutorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAutorization" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserAutorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAutorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListPositions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListPositions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListPositions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListPositionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListBalsam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListBalsam" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListBalsam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListBalsamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListShampoo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListShampoo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListShampoo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListShampooResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListLaque_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLaque" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListLaque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLaqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListColor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListFoundation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListFoundation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListFoundation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListFoundationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListPowder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListPowder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListPowder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListPowderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListShadow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListShadow" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListShadow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListShadowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListMascara_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListMascara" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListMascara_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListMascaraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListLipstick_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLipstick" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListLipstick_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLipstickResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTop" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListBase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListPolish_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListPolish" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListPolish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListPolishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmployees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployees" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmployees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddShampoo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShampoo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddShampoo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShampooResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddBalsam_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBalsam" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddBalsam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBalsamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddColor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddLaque_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLaque" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddLaque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLaqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFoundation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFoundation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFoundation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFoundationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddPowder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPowder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddPowder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPowderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddShadow_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShadow" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddShadow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShadowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddMascara_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMascara" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddMascara_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMascaraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddLipstick_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLipstick" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddLipstick_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLipstickResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTop" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddPolish_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPolish" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddPolish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPolishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShampoo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShampoo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShampoo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShampooResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBalsam_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBalsam" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBalsam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBalsamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateColor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLaque_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLaque" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLaque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLaqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateFoundation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFoundation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateFoundation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFoundationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePowder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePowder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePowder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePowderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShadow_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShadow" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShadow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShadowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMascara_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMascara" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMascara_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMascaraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLipstick_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLipstick" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLipstick_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLipstickResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTop" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePolish_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePolish" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePolish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePolishResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetUserAutorization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserAutorization" message="tns:IService1_GetUserAutorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserAutorizationResponse" message="tns:IService1_GetUserAutorization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListPositions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListPositions" message="tns:IService1_GetListPositions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListPositionsResponse" message="tns:IService1_GetListPositions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListBalsam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListBalsam" message="tns:IService1_GetListBalsam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListBalsamResponse" message="tns:IService1_GetListBalsam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListShampoo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListShampoo" message="tns:IService1_GetListShampoo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListShampooResponse" message="tns:IService1_GetListShampoo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListLaque">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListLaque" message="tns:IService1_GetListLaque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListLaqueResponse" message="tns:IService1_GetListLaque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListColor" message="tns:IService1_GetListColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListColorResponse" message="tns:IService1_GetListColor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFoundation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListFoundation" message="tns:IService1_GetListFoundation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListFoundationResponse" message="tns:IService1_GetListFoundation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListPowder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListPowder" message="tns:IService1_GetListPowder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListPowderResponse" message="tns:IService1_GetListPowder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListShadow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListShadow" message="tns:IService1_GetListShadow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListShadowResponse" message="tns:IService1_GetListShadow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListMascara">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListMascara" message="tns:IService1_GetListMascara_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListMascaraResponse" message="tns:IService1_GetListMascara_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListLipstick">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListLipstick" message="tns:IService1_GetListLipstick_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListLipstickResponse" message="tns:IService1_GetListLipstick_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListTop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListTop" message="tns:IService1_GetListTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListTopResponse" message="tns:IService1_GetListTop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListBase" message="tns:IService1_GetListBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListBaseResponse" message="tns:IService1_GetListBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListPolish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListPolish" message="tns:IService1_GetListPolish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListPolishResponse" message="tns:IService1_GetListPolish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteProduct" message="tns:IService1_DeleteProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteProductResponse" message="tns:IService1_DeleteProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmployees" message="tns:IService1_GetEmployees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmployeesResponse" message="tns:IService1_GetEmployees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteEmployee" message="tns:IService1_DeleteEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteEmployeeResponse" message="tns:IService1_DeleteEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddEmployee" message="tns:IService1_AddEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddEmployeeResponse" message="tns:IService1_AddEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShampoo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddShampoo" message="tns:IService1_AddShampoo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddShampooResponse" message="tns:IService1_AddShampoo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBalsam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddBalsam" message="tns:IService1_AddBalsam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddBalsamResponse" message="tns:IService1_AddBalsam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddColor" message="tns:IService1_AddColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddColorResponse" message="tns:IService1_AddColor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLaque">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddLaque" message="tns:IService1_AddLaque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddLaqueResponse" message="tns:IService1_AddLaque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFoundation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddFoundation" message="tns:IService1_AddFoundation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddFoundationResponse" message="tns:IService1_AddFoundation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPowder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddPowder" message="tns:IService1_AddPowder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddPowderResponse" message="tns:IService1_AddPowder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShadow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddShadow" message="tns:IService1_AddShadow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddShadowResponse" message="tns:IService1_AddShadow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMascara">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddMascara" message="tns:IService1_AddMascara_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddMascaraResponse" message="tns:IService1_AddMascara_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLipstick">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddLipstick" message="tns:IService1_AddLipstick_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddLipstickResponse" message="tns:IService1_AddLipstick_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddTop" message="tns:IService1_AddTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddTopResponse" message="tns:IService1_AddTop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddBase" message="tns:IService1_AddBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddBaseResponse" message="tns:IService1_AddBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPolish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddPolish" message="tns:IService1_AddPolish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddPolishResponse" message="tns:IService1_AddPolish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShampoo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateShampoo" message="tns:IService1_UpdateShampoo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateShampooResponse" message="tns:IService1_UpdateShampoo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBalsam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateBalsam" message="tns:IService1_UpdateBalsam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateBalsamResponse" message="tns:IService1_UpdateBalsam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateColor" message="tns:IService1_UpdateColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateColorResponse" message="tns:IService1_UpdateColor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLaque">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateLaque" message="tns:IService1_UpdateLaque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateLaqueResponse" message="tns:IService1_UpdateLaque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFoundation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateFoundation" message="tns:IService1_UpdateFoundation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateFoundationResponse" message="tns:IService1_UpdateFoundation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePowder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePowder" message="tns:IService1_UpdatePowder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePowderResponse" message="tns:IService1_UpdatePowder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShadow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateShadow" message="tns:IService1_UpdateShadow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateShadowResponse" message="tns:IService1_UpdateShadow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMascara">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateMascara" message="tns:IService1_UpdateMascara_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateMascaraResponse" message="tns:IService1_UpdateMascara_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLipstick">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateLipstick" message="tns:IService1_UpdateLipstick_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateLipstickResponse" message="tns:IService1_UpdateLipstick_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateTop" message="tns:IService1_UpdateTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateTopResponse" message="tns:IService1_UpdateTop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateBase" message="tns:IService1_UpdateBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateBaseResponse" message="tns:IService1_UpdateBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePolish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePolish" message="tns:IService1_UpdatePolish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePolishResponse" message="tns:IService1_UpdatePolish_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserAutorization">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserAutorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListPositions">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListPositions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListBalsam">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListBalsam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListShampoo">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListShampoo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLaque">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListLaque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListColor">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFoundation">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListFoundation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListPowder">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListPowder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListShadow">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListShadow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListMascara">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListMascara" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLipstick">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListLipstick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListTop">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListTop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListBase">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListPolish">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListPolish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShampoo">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddShampoo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBalsam">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddBalsam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddColor">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLaque">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddLaque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFoundation">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddFoundation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPowder">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddPowder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShadow">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddShadow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMascara">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddMascara" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLipstick">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddLipstick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTop">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddTop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBase">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPolish">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddPolish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShampoo">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateShampoo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBalsam">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateBalsam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateColor">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLaque">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateLaque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFoundation">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateFoundation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePowder">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePowder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShadow">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateShadow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMascara">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateMascara" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLipstick">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateLipstick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTop">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateTop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePolish">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePolish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:61591/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
