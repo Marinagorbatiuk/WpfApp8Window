@@ -13,6 +13,12 @@
   <wsdl:message name="IService1_GetUserAutorization_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserAutorizationResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServices" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetListPositions_InputMessage">
     <wsdl:part name="parameters" element="tns:GetListPositions" />
   </wsdl:message>
@@ -264,6 +270,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserAutorization" message="tns:IService1_GetUserAutorization_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserAutorizationResponse" message="tns:IService1_GetUserAutorization_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetServices" message="tns:IService1_GetServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetServicesResponse" message="tns:IService1_GetServices_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetListPositions">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListPositions" message="tns:IService1_GetListPositions_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListPositionsResponse" message="tns:IService1_GetListPositions_OutputMessage" />
@@ -433,6 +443,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetUserAutorization">
       <soap:operation soapAction="http://tempuri.org/IService1/GetUserAutorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetServices" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

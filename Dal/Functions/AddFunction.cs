@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Dal.ServiceReference1;
 namespace Dal
 {
-    class AddFunction
+ public   class AddFunction
     {
         
         private Service1Client client = new Service1Client();

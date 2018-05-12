@@ -68,47 +68,172 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         </DataGrid>-->
         <TabControl x:Name="StockRoom"  Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="7" Grid.RowSpan="15" TabStripPlacement="Left"  Background="Ivory" >
             <TabItem Style="{DynamicResource MenuLevel2}"   Header="Shampoo" >
-                <DataGrid x:Name="GridShampoo" AutoGenerateColumns="True" IsReadOnly="True">
+                <DataGrid x:Name="GridShampoo" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
                     <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                     <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                     <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
                     <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
-                    <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
-                    <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                    </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Balsam">
-                <DataGrid x:Name="GridBalsam" AutoGenerateColumns="True" IsReadOnly="True" ></DataGrid>
+                <DataGrid x:Name="GridBalsam" AutoGenerateColumns="False" IsReadOnly="True" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Color">
-                <DataGrid x:Name="GridColor" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridColor" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Laque">
-                <DataGrid x:Name="GridLaque" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridLaque" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Powder">
-                <DataGrid x:Name="GridPowder" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridPowder" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Foundation">
-                <DataGrid x:Name="GridFoundation" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridFoundation" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem  Style="{DynamicResource MenuLevel2}" Header="Shadow">
-                <DataGrid x:Name="GridShadow" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridShadow" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Lipstick">
-                <DataGrid x:Name="GridLipstick" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridLipstick" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Mascara">
-                <DataGrid x:Name="GridMascara" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridMascara" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem  Style="{DynamicResource MenuLevel2}" Header="NailBase">
-                <DataGrid x:Name="GridBase" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridBase" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="NailTop">
-                <DataGrid x:Name="GridNailTop" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridNailTop" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
             <TabItem  Style="{DynamicResource MenuLevel2}" Header="NailEnamel">
-                <DataGrid x:Name="GridNailEnamel" AutoGenerateColumns="True" IsReadOnly="True"></DataGrid>
+                <DataGrid x:Name="GridNailEnamel" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}" />
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" />
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" />
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding QuantityBottles}" />
+                        <DataGridTextColumn Header="QuantityGeneral" Binding="{Binding QuantityGeneralVolume}" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </TabItem>
         </TabControl>
 
@@ -132,7 +257,9 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         <Button Grid.Column="9" Grid.Row="15" Margin="2" Click="buyProduct">Buy</Button>
 
         <Button Grid.Column="10" Grid.Row="15" Margin="2" Click="Delete">Delete</Button>
-        <TextBox x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15" Margin="15 0 5 0" materialDesign:HintAssist.Hint="Quantity"  Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" ></TextBox>
+
+        <!--<Controls:NumericUpDown x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" Maximum="10" Minimum="0" ValueChanged="ValueChanged"></Controls:NumericUpDown>-->
     </Grid>
    
 </UserControl>

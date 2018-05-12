@@ -95,6 +95,9 @@
     <None Include="Connected Services\ServiceReference1\Dal.ServiceReference1.PowderWCF.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference1\Dal.ServiceReference1.ServicesWCF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference1\Dal.ServiceReference1.ShadowsWCF.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

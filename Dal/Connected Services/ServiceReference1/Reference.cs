@@ -185,15 +185,102 @@ namespace Dal.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BalsamWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ServicesWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
     [System.SerializableAttribute()]
-    public partial class BalsamWCF : Dal.ServiceReference1.MaterialsWCF {
+    public partial class ServicesWCF : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Dal.ServiceReference1.MaterialsWCF[] WCFMaterialsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Dal.ServiceReference1.MaterialsWCF[] WCFMaterials {
+            get {
+                return this.WCFMaterialsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WCFMaterialsField, value) != true)) {
+                    this.WCFMaterialsField = value;
+                    this.RaisePropertyChanged("WCFMaterials");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MaterialsWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.BalsamWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.ShampooWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.LaqueWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.ColorWCF))]
@@ -205,7 +292,6 @@ namespace Dal.ServiceReference1 {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.NailTopWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.NailBaseWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.NailPolishWCF))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.BalsamWCF))]
     public partial class MaterialsWCF : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -357,6 +443,13 @@ namespace Dal.ServiceReference1 {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BalsamWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
+    [System.SerializableAttribute()]
+    public partial class BalsamWCF : Dal.ServiceReference1.MaterialsWCF {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -612,99 +705,6 @@ namespace Dal.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ServicesWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
-    [System.SerializableAttribute()]
-    public partial class ServicesWCF : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Dal.ServiceReference1.MaterialsWCF[] WCFMaterialsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Dal.ServiceReference1.MaterialsWCF[] WCFMaterials {
-            get {
-                return this.WCFMaterialsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.WCFMaterialsField, value) != true)) {
-                    this.WCFMaterialsField = value;
-                    this.RaisePropertyChanged("WCFMaterials");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -714,6 +714,12 @@ namespace Dal.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUserAutorization", ReplyAction="http://tempuri.org/IService1/GetUserAutorizationResponse")]
         System.Threading.Tasks.Task<Dal.ServiceReference1.StaffWCF> GetUserAutorizationAsync(string login, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetServices", ReplyAction="http://tempuri.org/IService1/GetServicesResponse")]
+        Dal.ServiceReference1.ServicesWCF[] GetServices();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetServices", ReplyAction="http://tempuri.org/IService1/GetServicesResponse")]
+        System.Threading.Tasks.Task<Dal.ServiceReference1.ServicesWCF[]> GetServicesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListPositions", ReplyAction="http://tempuri.org/IService1/GetListPositionsResponse")]
         Dal.ServiceReference1.WorkPositionWCF[] GetListPositions();
@@ -995,6 +1001,14 @@ namespace Dal.ServiceReference1 {
         
         public System.Threading.Tasks.Task<Dal.ServiceReference1.StaffWCF> GetUserAutorizationAsync(string login, string password) {
             return base.Channel.GetUserAutorizationAsync(login, password);
+        }
+        
+        public Dal.ServiceReference1.ServicesWCF[] GetServices() {
+            return base.Channel.GetServices();
+        }
+        
+        public System.Threading.Tasks.Task<Dal.ServiceReference1.ServicesWCF[]> GetServicesAsync() {
+            return base.Channel.GetServicesAsync();
         }
         
         public Dal.ServiceReference1.WorkPositionWCF[] GetListPositions() {

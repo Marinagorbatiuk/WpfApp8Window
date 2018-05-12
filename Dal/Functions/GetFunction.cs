@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using Dal.ServiceReference1;
 namespace Dal
 {
-    class GetFunction
+   public class GetFunction
     {
         private Service1Client client = new Service1Client();
         public Staff GetUserAutorization(string login, string password)
         {
             Staff staff = null;
             StaffWCF staffwcf = client.GetUserAutorization(login, password);
-            if (staff != null)
+            if (staffwcf != null)
             {
                 staff = new Staff
                 {
@@ -114,14 +114,15 @@ namespace Dal
         }
         public List<Powder> GetListPowder()
         {
+            
             List<Powder> PowderList = new List<Powder>();
             PowderList = client.GetListPowder().Select(x => Convertation.ConvertPowderToDAL(x)).ToList();
             return PowderList;
         }
-        //public List<Services> GetListServices()
+        //public List<ServicesWCF> GetListServices()
         //{
-        //    List<Services> getlistServices = new List<Services>();
-        //    List<ServicesWCF> tmplistServices = client.get;
+        //    List<ServicesWCF> getlistServices = new List<ServicesWCF>();
+        //    List<Services> tmplistServices = client.GetServices();
         //    getlistServices.AddRange(tmplistServices.Select(x => new ServicesWCF
         //    {
         //        Name = x.Name,

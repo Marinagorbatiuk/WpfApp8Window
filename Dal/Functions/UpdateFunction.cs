@@ -7,7 +7,7 @@ using Dal.ServiceReference1;
 
 namespace Dal
 {
-    class UpdateFunction
+ public   class UpdateFunction
     {
         private Service1Client client = new Service1Client();
         public void UpdateShampoo(Shampoo Shampoo)

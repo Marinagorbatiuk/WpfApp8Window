@@ -16,6 +16,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetServices">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetServicesResult" nillable="true" type="q2:ArrayOfServicesWCF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetListPositions">
     <xs:complexType>
       <xs:sequence />
@@ -24,7 +36,7 @@
   <xs:element name="GetListPositionsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListPositionsResult" nillable="true" type="q2:ArrayOfWorkPositionWCF" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListPositionsResult" nillable="true" type="q3:ArrayOfWorkPositionWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -36,7 +48,7 @@
   <xs:element name="GetListBalsamResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListBalsamResult" nillable="true" type="q3:ArrayOfBalsamWCF" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListBalsamResult" nillable="true" type="q4:ArrayOfBalsamWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -48,7 +60,7 @@
   <xs:element name="GetListShampooResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListShampooResult" nillable="true" type="q4:ArrayOfShampooWCF" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListShampooResult" nillable="true" type="q5:ArrayOfShampooWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -60,7 +72,7 @@
   <xs:element name="GetListLaqueResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListLaqueResult" nillable="true" type="q5:ArrayOfLaqueWCF" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListLaqueResult" nillable="true" type="q6:ArrayOfLaqueWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -72,7 +84,7 @@
   <xs:element name="GetListColorResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListColorResult" nillable="true" type="q6:ArrayOfColorWCF" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListColorResult" nillable="true" type="q7:ArrayOfColorWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -84,7 +96,7 @@
   <xs:element name="GetListFoundationResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListFoundationResult" nillable="true" type="q7:ArrayOfFoundationWCF" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListFoundationResult" nillable="true" type="q8:ArrayOfFoundationWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -96,7 +108,7 @@
   <xs:element name="GetListPowderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListPowderResult" nillable="true" type="q8:ArrayOfPowderWCF" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListPowderResult" nillable="true" type="q9:ArrayOfPowderWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -108,7 +120,7 @@
   <xs:element name="GetListShadowResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListShadowResult" nillable="true" type="q9:ArrayOfShadowsWCF" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListShadowResult" nillable="true" type="q10:ArrayOfShadowsWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -120,7 +132,7 @@
   <xs:element name="GetListMascaraResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListMascaraResult" nillable="true" type="q10:ArrayOfMascaraWCF" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListMascaraResult" nillable="true" type="q11:ArrayOfMascaraWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -132,7 +144,7 @@
   <xs:element name="GetListLipstickResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListLipstickResult" nillable="true" type="q11:ArrayOfLipstickWCF" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListLipstickResult" nillable="true" type="q12:ArrayOfLipstickWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -144,7 +156,7 @@
   <xs:element name="GetListTopResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListTopResult" nillable="true" type="q12:ArrayOfNailTopWCF" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListTopResult" nillable="true" type="q13:ArrayOfNailTopWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -156,7 +168,7 @@
   <xs:element name="GetListBaseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListBaseResult" nillable="true" type="q13:ArrayOfNailBaseWCF" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListBaseResult" nillable="true" type="q14:ArrayOfNailBaseWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -168,7 +180,7 @@
   <xs:element name="GetListPolishResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListPolishResult" nillable="true" type="q14:ArrayOfNailPolishWCF" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetListPolishResult" nillable="true" type="q15:ArrayOfNailPolishWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -192,7 +204,7 @@
   <xs:element name="GetEmployeesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q15:ArrayOfStaffWCF" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q16:ArrayOfStaffWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -211,7 +223,7 @@
   <xs:element name="AddEmployee">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="staffWCF" nillable="true" type="q16:StaffWCF" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="staffWCF" nillable="true" type="q17:StaffWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -223,7 +235,7 @@
   <xs:element name="AddShampoo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shampooWCF" nillable="true" type="q17:ShampooWCF" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shampooWCF" nillable="true" type="q18:ShampooWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -235,7 +247,7 @@
   <xs:element name="AddBalsam">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="balsamWCF" nillable="true" type="q18:BalsamWCF" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="balsamWCF" nillable="true" type="q19:BalsamWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -247,7 +259,7 @@
   <xs:element name="AddColor">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="colorWCF" nillable="true" type="q19:ColorWCF" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="colorWCF" nillable="true" type="q20:ColorWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -259,7 +271,7 @@
   <xs:element name="AddLaque">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="laqueWCF" nillable="true" type="q20:LaqueWCF" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="laqueWCF" nillable="true" type="q21:LaqueWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -271,7 +283,7 @@
   <xs:element name="AddFoundation">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="foundationWCF" nillable="true" type="q21:FoundationWCF" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="foundationWCF" nillable="true" type="q22:FoundationWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -283,7 +295,7 @@
   <xs:element name="AddPowder">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="powderWCF" nillable="true" type="q22:PowderWCF" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="powderWCF" nillable="true" type="q23:PowderWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -295,7 +307,7 @@
   <xs:element name="AddShadow">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shadowsWCF" nillable="true" type="q23:ShadowsWCF" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shadowsWCF" nillable="true" type="q24:ShadowsWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -307,7 +319,7 @@
   <xs:element name="AddMascara">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="mascaraWCF" nillable="true" type="q24:MascaraWCF" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="mascaraWCF" nillable="true" type="q25:MascaraWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -319,7 +331,7 @@
   <xs:element name="AddLipstick">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="lipstickWCF" nillable="true" type="q25:LipstickWCF" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="lipstickWCF" nillable="true" type="q26:LipstickWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -331,7 +343,7 @@
   <xs:element name="AddTop">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailTopWCF" nillable="true" type="q26:NailTopWCF" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailTopWCF" nillable="true" type="q27:NailTopWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -343,7 +355,7 @@
   <xs:element name="AddBase">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailBaseWCF" nillable="true" type="q27:NailBaseWCF" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailBaseWCF" nillable="true" type="q28:NailBaseWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -355,7 +367,7 @@
   <xs:element name="AddPolish">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailPolishWCF" nillable="true" type="q28:NailPolishWCF" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailPolishWCF" nillable="true" type="q29:NailPolishWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -367,7 +379,7 @@
   <xs:element name="UpdateShampoo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shampooWCF" nillable="true" type="q29:ShampooWCF" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shampooWCF" nillable="true" type="q30:ShampooWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -379,7 +391,7 @@
   <xs:element name="UpdateBalsam">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="balsamWCF" nillable="true" type="q30:BalsamWCF" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="balsamWCF" nillable="true" type="q31:BalsamWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -391,7 +403,7 @@
   <xs:element name="UpdateColor">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="colorWCF" nillable="true" type="q31:ColorWCF" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="colorWCF" nillable="true" type="q32:ColorWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -403,7 +415,7 @@
   <xs:element name="UpdateLaque">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="laqueWCF" nillable="true" type="q32:LaqueWCF" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="laqueWCF" nillable="true" type="q33:LaqueWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -415,7 +427,7 @@
   <xs:element name="UpdateFoundation">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="foundationWCF" nillable="true" type="q33:FoundationWCF" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="foundationWCF" nillable="true" type="q34:FoundationWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -427,7 +439,7 @@
   <xs:element name="UpdatePowder">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="powderWCF" nillable="true" type="q34:PowderWCF" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="powderWCF" nillable="true" type="q35:PowderWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -439,7 +451,7 @@
   <xs:element name="UpdateShadow">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shadowsWCF" nillable="true" type="q35:ShadowsWCF" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="shadowsWCF" nillable="true" type="q36:ShadowsWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -451,7 +463,7 @@
   <xs:element name="UpdateMascara">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="mascaraWCF" nillable="true" type="q36:MascaraWCF" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="mascaraWCF" nillable="true" type="q37:MascaraWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -463,7 +475,7 @@
   <xs:element name="UpdateLipstick">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="lipstickWCF" nillable="true" type="q37:LipstickWCF" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="lipstickWCF" nillable="true" type="q38:LipstickWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -475,7 +487,7 @@
   <xs:element name="UpdateTop">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailTopWCF" nillable="true" type="q38:NailTopWCF" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailTopWCF" nillable="true" type="q39:NailTopWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -487,7 +499,7 @@
   <xs:element name="UpdateBase">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailBaseWCF" nillable="true" type="q39:NailBaseWCF" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailBaseWCF" nillable="true" type="q40:NailBaseWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -499,7 +511,7 @@
   <xs:element name="UpdatePolish">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailPolishWCF" nillable="true" type="q40:NailPolishWCF" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/WcfService" minOccurs="0" name="nailPolishWCF" nillable="true" type="q41:NailPolishWCF" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

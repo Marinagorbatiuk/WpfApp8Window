@@ -22,21 +22,55 @@ namespace Dal
         public int QuantityBottles { get; set; }
         [Required]
         public double QuantityGeneralVolume { get; set; }
-        public string Description { get; set; }
-        public string Color { get; set; }
+        // public string Description { get; set; }
+        // public string Color { get; set; }
         public virtual ICollection<Services> Service { get; set; }
     }
-        public class Shampoo : Materials { }
-        public class Balsam : Materials { }
-        public class HairColor : Materials { }
-        public class Laque : Materials { }
-        public class Lipstick : Materials { }
-        public class Mascara : Materials { }
-        public class Foundation : Materials { }
-        public class Powder : Materials { }
-        public class Shadows : Materials { }
-        public class NailPolish : Materials { }
-        public class NailTop : Materials { }
-        public class NailBase : Materials { }
-    
+
+
+    public class Shampoo : Materials
+    {
+        public string Description { get; set; }
+    }
+    public class Balsam : Materials { }
+    public class HairColor : Materials
+    {
+        public string Description { get; set; }
+        [Required]
+        public string Color { get; set; }
+    }
+    public class Laque : Materials { }
+    public class Lipstick : Materials
+    {
+        public string Description { get; set; }
+        [Required]
+        public string Color { get; set; }
+    }
+    public class Mascara : Materials
+    {
+        public string Color { get; set; }
+    }
+    public class Foundation : Materials
+    {
+        public string Description { get; set; }
+        [Required]
+        public string Color { get; set; }
+    }
+    public class Powder : Materials
+    {
+        [Required]
+        public string Color { get; set; }
+    }
+    public class Shadows : Materials
+    {
+        [Required]
+        public string Color { get; set; }
+    }
+    public class NailPolish : Materials
+    {
+        public string Color { get; set; }
+    }
+    public class NailTop : Materials { }
+    public class NailBase : Materials { }
+
 }

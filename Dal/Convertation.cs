@@ -71,7 +71,7 @@ namespace Dal
             };
             return wcfServices;
         }
-        public static Services ConvertServicesToWcf(ServicesWCF wcfServices)
+        public static Services ConvertServicesToDal(ServicesWCF wcfServices)
         {
             Services service = new Services()
             {

@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using BLL;
 using MahApps.Metro.Controls;
 namespace WpfApp8Window
 {
@@ -43,9 +42,6 @@ namespace WpfApp8Window
             { UserControlMaterials materials = new UserControlMaterials();
                 control.Content = materials;
 
-                //BusinessLogic bll = new BusinessLogic();
-                //bll.GetListShampoo();
-                //materials.GridShampoo.ItemsSource= 
             }
         }
     }

@@ -23,39 +23,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfStaffWCF" nillable="true" type="tns:ArrayOfStaffWCF" />
-  <xs:complexType name="ArrayOfWorkPositionWCF">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPositionWCF" nillable="true" type="tns:WorkPositionWCF" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfWorkPositionWCF" nillable="true" type="tns:ArrayOfWorkPositionWCF" />
-  <xs:complexType name="ArrayOfBalsamWCF">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalsamWCF" nillable="true" type="tns:BalsamWCF" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfBalsamWCF" nillable="true" type="tns:ArrayOfBalsamWCF" />
-  <xs:complexType name="BalsamWCF">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:MaterialsWCF">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="BalsamWCF" nillable="true" type="tns:BalsamWCF" />
-  <xs:complexType name="MaterialsWCF">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="BllServices" nillable="true" type="tns:ArrayOfServicesWCF" />
-      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
-      <xs:element minOccurs="0" name="QuantityBottles" type="xs:int" />
-      <xs:element minOccurs="0" name="QuantityGeneralVolume" type="xs:double" />
-      <xs:element minOccurs="0" name="Volume" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="MaterialsWCF" nillable="true" type="tns:MaterialsWCF" />
   <xs:complexType name="ArrayOfServicesWCF">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ServicesWCF" nillable="true" type="tns:ServicesWCF" />
@@ -77,6 +44,39 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfMaterialsWCF" nillable="true" type="tns:ArrayOfMaterialsWCF" />
+  <xs:complexType name="MaterialsWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BllServices" nillable="true" type="tns:ArrayOfServicesWCF" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QuantityBottles" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityGeneralVolume" type="xs:double" />
+      <xs:element minOccurs="0" name="Volume" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaterialsWCF" nillable="true" type="tns:MaterialsWCF" />
+  <xs:complexType name="ArrayOfWorkPositionWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPositionWCF" nillable="true" type="tns:WorkPositionWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkPositionWCF" nillable="true" type="tns:ArrayOfWorkPositionWCF" />
+  <xs:complexType name="ArrayOfBalsamWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalsamWCF" nillable="true" type="tns:BalsamWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBalsamWCF" nillable="true" type="tns:ArrayOfBalsamWCF" />
+  <xs:complexType name="BalsamWCF">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MaterialsWCF">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BalsamWCF" nillable="true" type="tns:BalsamWCF" />
   <xs:complexType name="ArrayOfShampooWCF">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ShampooWCF" nillable="true" type="tns:ShampooWCF" />
