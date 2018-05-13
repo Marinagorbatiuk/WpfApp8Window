@@ -895,6 +895,12 @@ namespace Dal.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddPolish", ReplyAction="http://tempuri.org/IService1/AddPolishResponse")]
         System.Threading.Tasks.Task AddPolishAsync(Dal.ServiceReference1.NailPolishWCF nailPolishWCF);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetChangedQuantity", ReplyAction="http://tempuri.org/IService1/GetChangedQuantityResponse")]
+        void GetChangedQuantity(int QuantityBottles, double QuantityGeneralVolume, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetChangedQuantity", ReplyAction="http://tempuri.org/IService1/GetChangedQuantityResponse")]
+        System.Threading.Tasks.Task GetChangedQuantityAsync(int QuantityBottles, double QuantityGeneralVolume, int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateShampoo", ReplyAction="http://tempuri.org/IService1/UpdateShampooResponse")]
         void UpdateShampoo(Dal.ServiceReference1.ShampooWCF shampooWCF);
         
@@ -1241,6 +1247,14 @@ namespace Dal.ServiceReference1 {
         
         public System.Threading.Tasks.Task AddPolishAsync(Dal.ServiceReference1.NailPolishWCF nailPolishWCF) {
             return base.Channel.AddPolishAsync(nailPolishWCF);
+        }
+        
+        public void GetChangedQuantity(int QuantityBottles, double QuantityGeneralVolume, int id) {
+            base.Channel.GetChangedQuantity(QuantityBottles, QuantityGeneralVolume, id);
+        }
+        
+        public System.Threading.Tasks.Task GetChangedQuantityAsync(int QuantityBottles, double QuantityGeneralVolume, int id) {
+            return base.Channel.GetChangedQuantityAsync(QuantityBottles, QuantityGeneralVolume, id);
         }
         
         public void UpdateShampoo(Dal.ServiceReference1.ShampooWCF shampooWCF) {

@@ -28,6 +28,7 @@ namespace WpfApp8Window
         public UserControlMaterials()
         {
             InitializeComponent();
+
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -62,6 +63,7 @@ namespace WpfApp8Window
                         AddPolishNail();
                 }
             }
+            load(null, null);
         }
 
         private void AddShampoo()
@@ -69,7 +71,10 @@ namespace WpfApp8Window
             Shampoo shampoo = new Shampoo();
             shampoo.Name = name.Text;
             shampoo.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             shampoo.Price = newPrice;
             double.TryParse(volume.Text, out double newVolume);
             shampoo.Volume = newVolume;
@@ -77,7 +82,7 @@ namespace WpfApp8Window
             shampoo.QuantityBottles = newQuantity;
             shampoo.QuantityGeneralVolume = newQuantity * newVolume;
             shampoo.Description = description.Text;
-            addFunction.AddShampooToDB(shampoo);
+            addFunction.AddShampooToDB(shampoo);      
         }
         private void AddBalsam()
         {
@@ -235,7 +240,7 @@ namespace WpfApp8Window
             nailPolish.QuantityGeneralVolume = newQuantity * newVolume;
             nailPolish.Color = color.Text;
             addFunction.AddPolishToDB(nailPolish);
-            GridShadow.ItemsSource = getFunction.GetListShadow();
+           // GridShadow.ItemsSource = getFunction.GetListShadow();
         }
 
         private void buyProduct(object sender, RoutedEventArgs e)
@@ -244,58 +249,75 @@ namespace WpfApp8Window
             {
                 if ((item as TabItem).IsSelected)
                 {
-                    //if ((item as TabItem).Header.ToString() == "Shampoo")
-                    //{
-                        Shampoo newshampoo = new Shampoo();
-                         int.TryParse(quantityToBuy.Text, out int textQuantity);
-                        double newQuantity = newshampoo.QuantityGeneralVolume;
-                        newQuantity += textQuantity * newshampoo.Volume;
-                        newshampoo.QuantityGeneralVolume = newQuantity;
-                        newshampoo.QuantityBottles += textQuantity;
-                        updateFunctionn.UpdateShampoo(newshampoo);
-                   // }       
+                    if (((item as TabItem).Content as DataGrid).SelectedIndex>=0)
+                    {
+                        if (quantityToBuy.Value!=null)
+                        {
+                            Materials materials = ((item as TabItem).Content as DataGrid).SelectedItem as Materials;
+                            int Id = materials.Id;
+                            double quantityGeneral = materials.QuantityGeneralVolume + (materials.Volume * (double)quantityToBuy.Value);
+                            int quantityBottles = materials.QuantityBottles + (int)quantityToBuy.Value;
+                            getFunction.GetChangedQuantity(quantityBottles, quantityGeneral, Id);
+                            load(null, null);
+                        }
+                    }       
                 }
             }
         }
 
+      
+
         private void Delete(object sender, RoutedEventArgs e)
         {
-
             foreach (var item in StockRoom.Items)
             {
                 if ((item as TabItem).IsSelected)
                 {
                     deleteFunction.DeleteProduct((((item as TabItem).Content as DataGrid).SelectedItem as Materials).Id);
-                    GridShampoo.ItemsSource = getFunction.GetListShampoo();
-                    GridBalsam.ItemsSource = getFunction.GetListBalsam();
-                    GridColor.ItemsSource = getFunction.GetListColor();
-                    GridFoundation.ItemsSource = getFunction.GetListFoundation();
-                    GridLaque.ItemsSource = getFunction.GetListLaque();
-                    GridLipstick.ItemsSource = getFunction.GetListLipstick();
-                    GridMascara.ItemsSource = getFunction.GetListMascara();
-                    GridBase.ItemsSource = getFunction.GetListNailBase();
-                    GridNailEnamel.ItemsSource = getFunction.GetListNailPolish();
-                    GridNailTop.ItemsSource = getFunction.GetListNailTop();
-                    GridPowder.ItemsSource = getFunction.GetListPowder();
-                    GridShadow.ItemsSource = getFunction.GetListShadow();
+                    load(null, null);
+                    //GridShampoo.ItemsSource = getFunction.GetListShampoo();
+                    //GridBalsam.ItemsSource = getFunction.GetListBalsam();
+                    //GridColor.ItemsSource = getFunction.GetListColor();
+                    //GridFoundation.ItemsSource = getFunction.GetListFoundation();
+                    //GridLaque.ItemsSource = getFunction.GetListLaque();
+                    //GridLipstick.ItemsSource = getFunction.GetListLipstick();
+                    //GridMascara.ItemsSource = getFunction.GetListMascara();
+                    //GridBase.ItemsSource = getFunction.GetListNailBase();
+                    //GridNailEnamel.ItemsSource = getFunction.GetListNailPolish();
+                    //GridNailTop.ItemsSource = getFunction.GetListNailTop();
+                    //GridPowder.ItemsSource = getFunction.GetListPowder();
+                    //GridShadow.ItemsSource = getFunction.GetListShadow();
                 }
             }
         }
 
         private void load(object sender, RoutedEventArgs e)
         {
+            GridShampoo.ItemsSource = null;
             GridShampoo.ItemsSource = getFunction.GetListShampoo();
+            GridBalsam.ItemsSource = null;
             GridBalsam.ItemsSource = getFunction.GetListBalsam();
-            GridColor.ItemsSource = getFunction.GetListColor();
+            GridColor.ItemsSource = null;
+           GridColor.ItemsSource = getFunction.GetListColor();
+            GridFoundation.ItemsSource = null;
             GridFoundation.ItemsSource = getFunction.GetListFoundation();
+            GridLaque.ItemsSource = null;
             GridLaque.ItemsSource = getFunction.GetListLaque();
+            GridLipstick.ItemsSource = null;
             GridLipstick.ItemsSource = getFunction.GetListLipstick();
+            GridMascara.ItemsSource = null;
             GridMascara.ItemsSource = getFunction.GetListMascara();
+            GridBase.ItemsSource = null;
             GridBase.ItemsSource = getFunction.GetListNailBase();
+            GridNailEnamel.ItemsSource = null;
             GridNailEnamel.ItemsSource = getFunction.GetListNailPolish();
-            GridNailTop.ItemsSource = getFunction.GetListNailTop();
+            GridNailTop.ItemsSource = null;
+          GridNailTop.ItemsSource = getFunction.GetListNailTop();
+            GridPowder.ItemsSource = null;
             GridPowder.ItemsSource = getFunction.GetListPowder();
+            GridShadow.ItemsSource = null;
             GridShadow.ItemsSource = getFunction.GetListShadow();
+            quantityToBuy.Value = 1;
         }
 
         private void ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)

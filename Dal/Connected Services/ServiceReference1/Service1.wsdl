@@ -193,6 +193,12 @@
   <wsdl:message name="IService1_AddPolish_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddPolishResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetChangedQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangedQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetChangedQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangedQuantityResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_UpdateShampoo_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateShampoo" />
   </wsdl:message>
@@ -389,6 +395,10 @@
     <wsdl:operation name="AddPolish">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddPolish" message="tns:IService1_AddPolish_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddPolishResponse" message="tns:IService1_AddPolish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetChangedQuantity" message="tns:IService1_GetChangedQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetChangedQuantityResponse" message="tns:IService1_GetChangedQuantity_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateShampoo">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateShampoo" message="tns:IService1_UpdateShampoo_InputMessage" />
@@ -713,6 +723,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddPolish">
       <soap:operation soapAction="http://tempuri.org/IService1/AddPolish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedQuantity">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetChangedQuantity" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

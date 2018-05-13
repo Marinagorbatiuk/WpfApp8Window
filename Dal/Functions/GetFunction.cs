@@ -27,6 +27,10 @@ namespace Dal
             }
             return staff;
         }
+        public void GetChangedQuantity(int QuantityBottles, double QuantityGeneralVolume, int id)
+        {
+            client.GetChangedQuantity(QuantityBottles, QuantityGeneralVolume, id);
+        }
         public List<WorkPosition> GetListPositions()
         {
             List<WorkPosition> positions = new List<WorkPosition>();

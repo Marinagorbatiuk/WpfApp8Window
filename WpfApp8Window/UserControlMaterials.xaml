@@ -68,7 +68,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         </DataGrid>-->
         <TabControl x:Name="StockRoom"  Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="7" Grid.RowSpan="15" TabStripPlacement="Left"  Background="Ivory" >
             <TabItem Style="{DynamicResource MenuLevel2}"   Header="Shampoo" >
-                <DataGrid x:Name="GridShampoo" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridShampoo" AutoGenerateColumns="False" IsReadOnly="True"
+                           Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                     <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                     <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -82,7 +85,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Balsam">
-                <DataGrid x:Name="GridBalsam" AutoGenerateColumns="False" IsReadOnly="True" >
+                <DataGrid x:Name="GridBalsam" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -97,7 +103,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Color">
-                <DataGrid x:Name="GridColor" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridColor" AutoGenerateColumns="False" IsReadOnly="True"
+                         Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -111,7 +120,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Laque">
-                <DataGrid x:Name="GridLaque" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridLaque" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -124,7 +136,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Powder">
-                <DataGrid x:Name="GridPowder" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridPowder" AutoGenerateColumns="False" IsReadOnly="True"
+                        Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -138,7 +153,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Foundation">
-                <DataGrid x:Name="GridFoundation" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridFoundation" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -153,7 +171,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem  Style="{DynamicResource MenuLevel2}" Header="Shadow">
-                <DataGrid x:Name="GridShadow" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridShadow" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -167,7 +188,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Lipstick">
-                <DataGrid x:Name="GridLipstick" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridLipstick" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -182,7 +206,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="Mascara">
-                <DataGrid x:Name="GridMascara" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridMascara" AutoGenerateColumns="False" IsReadOnly="True"
+                         Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -196,7 +223,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem  Style="{DynamicResource MenuLevel2}" Header="NailBase">
-                <DataGrid x:Name="GridBase" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridBase" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -209,7 +239,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem Style="{DynamicResource MenuLevel2}"  Header="NailTop">
-                <DataGrid x:Name="GridNailTop" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridNailTop" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -222,7 +255,10 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 </DataGrid>
             </TabItem>
             <TabItem  Style="{DynamicResource MenuLevel2}" Header="NailEnamel">
-                <DataGrid x:Name="GridNailEnamel" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="GridNailEnamel" AutoGenerateColumns="False" IsReadOnly="True"
+                          Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2"
+                          >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -257,9 +293,9 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         <Button Grid.Column="9" Grid.Row="15" Margin="2" Click="buyProduct">Buy</Button>
 
         <Button Grid.Column="10" Grid.Row="15" Margin="2" Click="Delete">Delete</Button>
-        <TextBox x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" ></TextBox>
+        <!--<TextBox x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" ></TextBox>-->
 
-        <!--<Controls:NumericUpDown x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" Maximum="10" Minimum="0" ValueChanged="ValueChanged"></Controls:NumericUpDown>-->
+        <Controls:NumericUpDown x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" Maximum="10" Minimum="1" ValueChanged="ValueChanged"></Controls:NumericUpDown>
     </Grid>
    
 </UserControl>

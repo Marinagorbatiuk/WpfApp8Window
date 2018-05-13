@@ -156,6 +156,7 @@ namespace Dal
                 QuantityBottles = foundation.QuantityBottles,
                 QuantityGeneralVolume = foundation.QuantityGeneralVolume,
                 Description = foundation.Description,
+                
             };
             return wcfFoundation;
         }

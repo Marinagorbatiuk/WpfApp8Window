@@ -39,9 +39,14 @@ namespace WpfApp8Window
 
             }
             if (materials.IsSelected)
-            { UserControlMaterials materials = new UserControlMaterials();
+            {
+                UserControlMaterials materials = new UserControlMaterials();
                 control.Content = materials;
-
+            }
+            if (users.IsSelected)
+            {
+                Users user = new Users();
+                control.Content = user;
             }
         }
     }

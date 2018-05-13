@@ -3,10 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:WpfApp8Window"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+              Loaded="load"
+             >
     <Grid>
-            
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#E0F7FA" />
+                <GradientStop Color="#B2EBF2" Offset="1"/>
+                <GradientStop Color="#80DEEA" Offset="0.546"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="52*"></ColumnDefinition>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid Name="GridUser" Grid.RowSpan="3" Background="Azure" RowBackground="Aqua" AlternatingRowBackground="DarkGray"
+                  Foreground="Brown" BorderBrush="Black" BorderThickness="2" Margin="20" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+               
+                <DataGridTextColumn Header="Login" Binding="{Binding Login}" />
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}" />
+                <DataGridTextColumn Header="Work Position" Binding="{Binding WorkPosition.Name}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle Grid.Column="1" Grid.RowSpan="2" Margin="80 110 80 80" Fill="White" RadiusY="10" RadiusX="10" >
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15"    ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <!--<materialDesign:PackIcon Grid.Column="1" Kind="ArrowLeft" Width="Auto" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="44,0,271,150" Grid.RowSpan="2"/>-->
+        <StackPanel Grid.Column="1" Margin="30" >
+            <RadioButton x:Name="adminRadioButton" VerticalAlignment="Center" HorizontalAlignment="Center" > Admin</RadioButton>
+            <RadioButton x:Name="employeeRadioButton" VerticalAlignment="Center" HorizontalAlignment="Center">Employee</RadioButton>
+        </StackPanel>
+        <TextBox x:Name="login" Grid.Column="2" Margin="100 10" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Login for new user" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="pass" Grid.Column="2" Margin="100 1 100 10" Grid.Row="1" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Password for new user" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  ></TextBox>
+        <Button x:Name="add" Style="{DynamicResource MaterialDesignFlatButton}" CommandTarget="{Binding ElementName=Dialog}" Background="LightGray" Grid.Column="2" Margin="190 60" Grid.Row="1" VerticalAlignment="Bottom" Click="add_Click">Add user</Button>
+        <Button x:Name="del" Style="{DynamicResource MaterialDesignFlatButton}" CommandTarget="{Binding ElementName=Dialog}" Background="LightGray" Grid.Column="2" Margin="190 0 190 60" Grid.Row="2" VerticalAlignment="Top" Click="del_Click">Delete user</Button>
     </Grid>
 </UserControl>
