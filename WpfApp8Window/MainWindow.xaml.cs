@@ -32,6 +32,7 @@ namespace WpfApp8Window
             InitializeComponent();
             ring.Visibility = Visibility.Hidden;
             StandartBrush = log.BorderBrush;
+            StandartBrush = pass.BorderBrush;
         }
 
         private async void ok(object sender, RoutedEventArgs e)

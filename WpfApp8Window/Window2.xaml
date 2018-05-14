@@ -29,7 +29,7 @@
                 <ColumnDefinition Width="50*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             
-            <Button x:Name="ButtonOpenMenu"  Click="ok" Background="Transparent" BorderBrush="Transparent" >
+            <Button x:Name="ButtonOpenMenu"  Click="ok" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"  >
                 <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
             </Button>
             <materialDesign:PackIcon Grid.Column="1" Kind="ArrowLeft" Width="20" Height="25" VerticalAlignment="Center" />

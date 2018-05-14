@@ -33,25 +33,10 @@ namespace WpfApp8Window
                 this.Close();
                 main.Show();
             }
-            if (HairCut.IsSelected)
+            if (Order.IsSelected)
             {
-                UserControlHairCut cut = new UserControlHairCut();
-                ControlUser.Content = cut;
-            }
-            if(HairColoring.IsSelected)
-            {
-                UserControlHairColoring color = new UserControlHairColoring();
-                ControlUser.Content = color;
-            }
-            if(MakeUp.IsSelected)
-            {
-                UserControlMakeUp makeup = new UserControlMakeUp();
-                ControlUser.Content = makeup;
-            }
-            if( Manicure.IsSelected)
-            {
-                UserControlManicure manicure = new UserControlManicure();
-                ControlUser.Content = manicure;
+                UserControlOrder order = new UserControlOrder();
+                ControlUser.Content = order;
             }
         }
 

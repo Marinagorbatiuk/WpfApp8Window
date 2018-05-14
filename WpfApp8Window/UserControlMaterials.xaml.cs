@@ -25,10 +25,13 @@ namespace WpfApp8Window
         GetFunction getFunction = new GetFunction();
         DeleteFunction deleteFunction = new DeleteFunction();
         UpdateFunction updateFunctionn = new UpdateFunction();
+        Brush StandartBrush = null;
         public UserControlMaterials()
         {
             InitializeComponent();
-
+            StandartBrush = price.BorderBrush;
+            StandartBrush = volume.BorderBrush;
+            StandartBrush = quantity.BorderBrush;
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -38,7 +41,9 @@ namespace WpfApp8Window
                 if ((item as TabItem).IsSelected)
                 {
                     if ((item as TabItem).Header.ToString() == "Shampoo")
+                    {
                         AddShampoo();
+                    }
                     if ((item as TabItem).Header.ToString() == "Balsam")
                         AddBalsam();
                     if ((item as TabItem).Header.ToString() == "Color")
@@ -68,32 +73,55 @@ namespace WpfApp8Window
 
         private void AddShampoo()
         {
+       
             Shampoo shampoo = new Shampoo();
             shampoo.Name = name.Text;
             shampoo.Brand = brand.Text;
           if(!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
+               
                 return;
             }
             shampoo.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+           if( !double.TryParse(volume.Text, out double newVolume))
+            {
+                volume.BorderBrush = Brushes.Red;
+                return;
+            }
             shampoo.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+           if(! int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
+                return;
+            }
             shampoo.QuantityBottles = newQuantity;
             shampoo.QuantityGeneralVolume = newQuantity * newVolume;
             shampoo.Description = description.Text;
-            addFunction.AddShampooToDB(shampoo);      
+            addFunction.AddShampooToDB(shampoo);
+            price.BorderBrush = StandartBrush;
+            volume.BorderBrush = StandartBrush;
+            quantity.BorderBrush = StandartBrush;
         }
         private void AddBalsam()
         {
             Balsam balsam = new Balsam();
             balsam.Name = name.Text;
             balsam.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             balsam.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+            if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             balsam.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+            if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             balsam.QuantityBottles = newQuantity;
             balsam.QuantityGeneralVolume = newQuantity * newVolume;
         }
@@ -102,11 +130,20 @@ namespace WpfApp8Window
             HairColor hairColor = new HairColor();
             hairColor.Name = name.Text;
             hairColor.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+          if( ! decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             hairColor.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+         if( !double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             hairColor.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+            if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             hairColor.QuantityBottles = newQuantity;
             hairColor.QuantityGeneralVolume = newQuantity * newVolume;
             hairColor.Description = description.Text;
@@ -117,11 +154,20 @@ namespace WpfApp8Window
             Laque laque = new Laque();
             laque.Name = name.Text;
             laque.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+           if(! decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             laque.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+         if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             laque.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+            if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             laque.QuantityBottles = newQuantity;
             laque.QuantityGeneralVolume = newQuantity * newVolume;
 
@@ -132,11 +178,20 @@ namespace WpfApp8Window
 
             foundation.Name = name.Text;
             foundation.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             foundation.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+           if( !double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             foundation.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+           if( !int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             foundation.QuantityBottles = newQuantity;
             foundation.QuantityGeneralVolume = newQuantity * newVolume;
             foundation.Color = color.Text;
@@ -147,11 +202,20 @@ namespace WpfApp8Window
             Powder powder = new Powder();
             powder.Name = name.Text;
             powder.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             powder.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+           if(! double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             powder.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+          if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             powder.QuantityBottles = newQuantity;
             powder.QuantityGeneralVolume = newQuantity * newVolume;
             powder.Color = color.Text;
@@ -161,11 +225,20 @@ namespace WpfApp8Window
             Shadows shadows = new Shadows();
             shadows.Name = name.Text;
             shadows.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             shadows.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+            if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             shadows.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+           if( !int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             shadows.QuantityBottles = newQuantity;
             shadows.QuantityGeneralVolume = newQuantity * newVolume;
             shadows.Color = color.Text;
@@ -175,11 +248,20 @@ namespace WpfApp8Window
             Mascara mascara = new Mascara();
             mascara.Name = name.Text;
             mascara.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             mascara.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+          if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             mascara.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+            if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             mascara.QuantityBottles = newQuantity;
             mascara.QuantityGeneralVolume = newQuantity * newVolume;
             mascara.Color = color.Text;
@@ -189,11 +271,20 @@ namespace WpfApp8Window
             Lipstick lipstick = new Lipstick();
             lipstick.Name = name.Text;
             lipstick.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+           if(! decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             lipstick.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+            if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             lipstick.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+           if( !int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             lipstick.QuantityBottles = newQuantity;
             lipstick.QuantityGeneralVolume = newQuantity * newVolume;
             lipstick.Color = color.Text;
@@ -204,11 +295,20 @@ namespace WpfApp8Window
             NailTop top = new NailTop();
             top.Name = name.Text;
             top.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             top.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+            if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             top.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+            if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             top.QuantityBottles = newQuantity;
             top.QuantityGeneralVolume = newQuantity * newVolume;
 
@@ -218,11 +318,20 @@ namespace WpfApp8Window
             NailBase nailBase = new NailBase();
             nailBase.Name = name.Text;
             nailBase.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+           if(! decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             nailBase.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+            if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             nailBase.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+            if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             nailBase.QuantityBottles = newQuantity;
             nailBase.QuantityGeneralVolume = newQuantity * newVolume;
         }
@@ -231,16 +340,24 @@ namespace WpfApp8Window
             NailPolish nailPolish = new NailPolish();
             nailPolish.Name = name.Text;
             nailPolish.Brand = brand.Text;
-            decimal.TryParse(price.Text, out decimal newPrice);
+          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            {
+                return;
+            }
             nailPolish.Price = newPrice;
-            double.TryParse(volume.Text, out double newVolume);
+            if(!double.TryParse(volume.Text, out double newVolume))
+            {
+                return;
+            }
             nailPolish.Volume = newVolume;
-            int.TryParse(quantity.Text, out int newQuantity);
+           if(!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                return;
+            }
             nailPolish.QuantityBottles = newQuantity;
             nailPolish.QuantityGeneralVolume = newQuantity * newVolume;
             nailPolish.Color = color.Text;
             addFunction.AddPolishToDB(nailPolish);
-           // GridShadow.ItemsSource = getFunction.GetListShadow();
         }
 
         private void buyProduct(object sender, RoutedEventArgs e)
@@ -264,9 +381,6 @@ namespace WpfApp8Window
                 }
             }
         }
-
-      
-
         private void Delete(object sender, RoutedEventArgs e)
         {
             foreach (var item in StockRoom.Items)
@@ -275,22 +389,9 @@ namespace WpfApp8Window
                 {
                     deleteFunction.DeleteProduct((((item as TabItem).Content as DataGrid).SelectedItem as Materials).Id);
                     load(null, null);
-                    //GridShampoo.ItemsSource = getFunction.GetListShampoo();
-                    //GridBalsam.ItemsSource = getFunction.GetListBalsam();
-                    //GridColor.ItemsSource = getFunction.GetListColor();
-                    //GridFoundation.ItemsSource = getFunction.GetListFoundation();
-                    //GridLaque.ItemsSource = getFunction.GetListLaque();
-                    //GridLipstick.ItemsSource = getFunction.GetListLipstick();
-                    //GridMascara.ItemsSource = getFunction.GetListMascara();
-                    //GridBase.ItemsSource = getFunction.GetListNailBase();
-                    //GridNailEnamel.ItemsSource = getFunction.GetListNailPolish();
-                    //GridNailTop.ItemsSource = getFunction.GetListNailTop();
-                    //GridPowder.ItemsSource = getFunction.GetListPowder();
-                    //GridShadow.ItemsSource = getFunction.GetListShadow();
                 }
             }
         }
-
         private void load(object sender, RoutedEventArgs e)
         {
             GridShampoo.ItemsSource = null;

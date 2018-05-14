@@ -55,6 +55,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -76,20 +78,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserControlHairColoring.xaml.cs">
-      <DependentUpon>UserControlHairColoring.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlHairCut.xaml.cs">
-      <DependentUpon>UserControlHairCut.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlMakeUp.xaml.cs">
-      <DependentUpon>UserControlMakeUp.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlManicure.xaml.cs">
-      <DependentUpon>UserControlManicure.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControlMaterials.xaml.cs">
       <DependentUpon>UserControlMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlOrder.xaml.cs">
+      <DependentUpon>UserControlOrder.xaml</DependentUpon>
     </Compile>
     <Compile Include="Users.xaml.cs">
       <DependentUpon>Users.xaml</DependentUpon>
@@ -112,23 +105,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControlHairColoring.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControlHairCut.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControlMakeUp.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControlManicure.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControlMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlOrder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -56,36 +56,12 @@
                                 <TextBlock  Text="Log Out" Margin="13" ></TextBlock>
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:Name="HairCut">
+                        <ListBoxItem x:Name="Order">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock >                                    
                                      <materialDesign:PackIcon Kind="Square" Foreground="Red"  Height="25" Width="20" Margin="10"  />
                                 </TextBlock>
-                                <TextBlock  Text="Hair Cut" Margin="13" ></TextBlock>
-                            </StackPanel>
-                        </ListBoxItem>
-                        <ListBoxItem x:Name="HairColoring">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock >                                    
-                                     <materialDesign:PackIcon Kind="Square" Foreground="Yellow"   Height="25" Width="20" Margin="10"  />
-                                </TextBlock>
-                                <TextBlock  Text="Hair Coloring" Margin="13" ></TextBlock>
-                            </StackPanel>
-                        </ListBoxItem>
-                        <ListBoxItem x:Name="MakeUp">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock >                                    
-                                     <materialDesign:PackIcon Kind="Square" Foreground="Green"  Height="25" Width="20" Margin="10"  />
-                                </TextBlock>
-                                <TextBlock  Text="Make Up" Margin="13" ></TextBlock>
-                            </StackPanel>
-                        </ListBoxItem>
-                        <ListBoxItem x:Name="Manicure">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock >                                    
-                                     <materialDesign:PackIcon Kind="Square" Foreground="DarkBlue"  Height="25" Width="20" Margin="10"  />
-                                </TextBlock>
-                                <TextBlock  Text="Manicure" Margin="13" ></TextBlock>
+                                <TextBlock  Text="Order" Margin="13" ></TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                     </ListBox>
