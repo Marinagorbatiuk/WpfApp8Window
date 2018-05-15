@@ -23,6 +23,34 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfStaffWCF" nillable="true" type="tns:ArrayOfStaffWCF" />
+  <xs:complexType name="ArrayOfWriteOffMaterialsWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WriteOffMaterialsWCF" nillable="true" type="tns:WriteOffMaterialsWCF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWriteOffMaterialsWCF" nillable="true" type="tns:ArrayOfWriteOffMaterialsWCF" />
+  <xs:complexType name="WriteOffMaterialsWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Material" nillable="true" type="tns:MaterialsWCF" />
+      <xs:element minOccurs="0" name="UsedQuantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WriteOffMaterialsWCF" nillable="true" type="tns:WriteOffMaterialsWCF" />
+  <xs:complexType name="MaterialsWCF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BllServices" nillable="true" type="tns:ArrayOfServicesWCF" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QuantityBottles" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityGeneralVolume" type="xs:double" />
+      <xs:element minOccurs="0" name="QuntityCount" type="xs:double" />
+      <xs:element minOccurs="0" name="Volume" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaterialsWCF" nillable="true" type="tns:MaterialsWCF" />
   <xs:complexType name="ArrayOfServicesWCF">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ServicesWCF" nillable="true" type="tns:ServicesWCF" />
@@ -44,19 +72,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfMaterialsWCF" nillable="true" type="tns:ArrayOfMaterialsWCF" />
-  <xs:complexType name="MaterialsWCF">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="BllServices" nillable="true" type="tns:ArrayOfServicesWCF" />
-      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
-      <xs:element minOccurs="0" name="QuantityBottles" type="xs:int" />
-      <xs:element minOccurs="0" name="QuantityGeneralVolume" type="xs:double" />
-      <xs:element minOccurs="0" name="Volume" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="MaterialsWCF" nillable="true" type="tns:MaterialsWCF" />
   <xs:complexType name="ArrayOfWorkPositionWCF">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkPositionWCF" nillable="true" type="tns:WorkPositionWCF" />

@@ -295,7 +295,7 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         <Button Grid.Column="10" Grid.Row="15" Margin="2" Click="Delete">Delete</Button>
         <!--<TextBox x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" ></TextBox>-->
 
-        <Controls:NumericUpDown x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" Maximum="10" Minimum="1" ValueChanged="ValueChanged"></Controls:NumericUpDown>
+        <Controls:NumericUpDown Margin="2" x:Name="quantityToBuy" Grid.Column="8" Grid.Row="15"  materialDesign:HintAssist.Hint="Quantity" Maximum="10" Minimum="1" ValueChanged="ValueChanged"></Controls:NumericUpDown>
     </Grid>
    
 </UserControl>

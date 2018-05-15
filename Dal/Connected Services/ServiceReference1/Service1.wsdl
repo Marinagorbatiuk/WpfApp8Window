@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:61591/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:61591/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:61591/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://localhost:61591/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_GetUserAutorization_InputMessage">
@@ -12,6 +13,12 @@
   </wsdl:message>
   <wsdl:message name="IService1_GetUserAutorization_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserAutorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_WritingOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:WritingOff" />
+  </wsdl:message>
+  <wsdl:message name="IService1_WritingOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WritingOffResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_GetServices_InputMessage">
     <wsdl:part name="parameters" element="tns:GetServices" />
@@ -276,6 +283,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserAutorization" message="tns:IService1_GetUserAutorization_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserAutorizationResponse" message="tns:IService1_GetUserAutorization_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="WritingOff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/WritingOff" message="tns:IService1_WritingOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/WritingOffResponse" message="tns:IService1_WritingOff_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetServices">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetServices" message="tns:IService1_GetServices_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetServicesResponse" message="tns:IService1_GetServices_OutputMessage" />
@@ -453,6 +464,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetUserAutorization">
       <soap:operation soapAction="http://tempuri.org/IService1/GetUserAutorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WritingOff">
+      <soap:operation soapAction="http://tempuri.org/IService1/WritingOff" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

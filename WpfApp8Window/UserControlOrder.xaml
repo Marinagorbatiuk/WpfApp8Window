@@ -15,7 +15,7 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     
     <UserControl.Resources>
         <Style x:Key="MenuLevel2" BasedOn="{StaticResource MetroTabItem}" TargetType="{x:Type TabItem}">
-            <Setter Property="mah:ControlsHelper.HeaderFontSize" Value="15"></Setter>
+            <Setter Property="mah:ControlsHelper.HeaderFontSize" Value="10"></Setter>
         </Style>
 
     </UserControl.Resources>
@@ -52,7 +52,7 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                 <RowDefinition Height="25*"></RowDefinition>
                 <RowDefinition Height="8*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="1">
+            <Grid Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="1">
                 <WrapPanel >
                     <RadioButton  x:Name="cut" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Right" Checked="cut_Checked" >Hair Cut</RadioButton>
                     <RadioButton x:Name="coloring" Grid.Row="1" Grid.Column="3"  HorizontalContentAlignment="Left" Checked="coloring_Checked" >Hair Coloring</RadioButton>
@@ -222,7 +222,7 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                     <RowDefinition Height="3*"></RowDefinition>
                     <RowDefinition Height="2*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="1" Grid.Row="1" Click="OkClick">ok</Button>
+                <Button x:Name="ok"  Grid.Column="1" Grid.Row="1" Click="OkClick">ok</Button>
             </Grid>
         </Grid>
 
@@ -269,12 +269,38 @@ xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                     <RowDefinition Height="8*"></RowDefinition>
                     <RowDefinition Height="8*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="1" Grid.Row="1" >ok</Button>
-                <Button Grid.Column="3" Grid.Row="1" >delete</Button>
+                <Button x:Name="order" Grid.Column="1" Grid.Row="1" Click="Button_Click" >ok</Button>
+                <Button x:Name="delete" Grid.Column="3" Grid.Row="1" >delete</Button>
 
             </Grid>
         </Grid>
         <!--<StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="5170" Margin="512.4,69,-182,-4789.4" VerticalAlignment="Top" Width="68"/>-->
+        <!--<materialDesign:DialogHost x:Name="Dialog" IsOpen="False" Grid.RowSpan="20" Grid.ColumnSpan="20" >
+            <materialDesign:DialogHost.DialogContent>
+                <Grid  Margin="10" Background="#E0F7FA">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2"  TextAlignment="Justify" FontWeight="Bold" >Do you want to leave?</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2"   TextAlignment="Justify" FontWeight="Bold" >The changes won't be saved</TextBlock>
+                    <Button Grid.Column="0" Grid.Row="4" Style="{DynamicResource MaterialDesignFlatButton}"  Background="AliceBlue" x:Name="yesButton">Yes</Button>
+                    <Button Grid.Column="1" Grid.Row="4" Style="{DynamicResource MaterialDesignFlatButton}"  Background="AliceBlue" x:Name="noButton">No</Button>
+                    
+                </Grid>
+                               
 
+            </materialDesign:DialogHost.DialogContent>
+
+        </materialDesign:DialogHost>-->
     </Grid>
 </UserControl>

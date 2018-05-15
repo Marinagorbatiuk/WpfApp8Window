@@ -48,18 +48,18 @@
             <Controls:SplitView x:Name="splitUser" DisplayMode="Overlay"  CompactPaneLength="75" OpenPaneLength="200">
                 <Controls:SplitView.Pane >
                     <ListBox x:Name="ListViewMenuUser" SelectionMode="Single"  SelectionChanged="ListViewMenu_SelectionChangedUser">
-                        <ListBoxItem x:Name="logoutUser">
+                        <ListBoxItem  x:Name="logoutUser">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock >                                    
-                                     <materialDesign:PackIcon Kind="Logout"   Height="25" Width="20" Margin="10"  />
+                                     <materialDesign:PackIcon Kind="Logout"    Height="25" Width="20" Margin="10"  />
                                 </TextBlock>
-                                <TextBlock  Text="Log Out" Margin="13" ></TextBlock>
+                                <TextBlock  Text="Log Out" Margin="13"  ></TextBlock>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem x:Name="Order">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock >                                    
-                                     <materialDesign:PackIcon Kind="Square" Foreground="Red"  Height="25" Width="20" Margin="10"  />
+                                     <materialDesign:PackIcon Kind="Square" Foreground="Blue"  Height="25" Width="20" Margin="10"  />
                                 </TextBlock>
                                 <TextBlock  Text="Order" Margin="13" ></TextBlock>
                             </StackPanel>
@@ -68,6 +68,29 @@
                 </Controls:SplitView.Pane>
             </Controls:SplitView>
         </Grid>
+        <materialDesign:DialogHost x:Name="Dialog" IsOpen="False" Grid.RowSpan="20" Grid.ColumnSpan="20" >
+            <materialDesign:DialogHost.DialogContent>
+                <Grid  Margin="10" Background="#E0F7FA">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2"  TextAlignment="Justify" FontWeight="Bold" >Do you want to leave?</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2"   TextAlignment="Justify" FontWeight="Bold" >The changes won't be saved</TextBlock>
+                    <Button Click="yes" Grid.Column="0" Grid.Row="4" Style="{DynamicResource MaterialDesignFlatButton}"  Background="AliceBlue" x:Name="yesButton">Yes</Button>
+                    <Button Click="no" Grid.Column="1" Grid.Row="4" Style="{DynamicResource MaterialDesignFlatButton}"  Background="AliceBlue" x:Name="noButton">No</Button>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
     </Grid>
    
 </Controls:MetroWindow>

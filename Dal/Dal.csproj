@@ -59,6 +59,7 @@
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\WorkPosition.cs" />
     <Compile Include="Functions\UpdateFunction.cs" />
+    <Compile Include="WriteOffMaterials.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -118,6 +119,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

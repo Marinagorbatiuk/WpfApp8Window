@@ -35,14 +35,14 @@ namespace WpfApp8Window
             Staff newstaff = new Staff();
             newstaff.Login = login.Text;
             newstaff.Password = pass.Text;
-            foreach( var item in positions)
-            {
-              MessageBox.Show(item.Id.ToString() + item.Name);
-            }
+            //foreach( var item in positions)
+            //{
+            //  //MessageBox.Show(item.Id.ToString() + item.Name);
+            //}
             if(adminRadioButton.IsChecked==true)
             {
+                //if (newstaff.Login==)
                 newstaff.WorkPosition = positions.First(x => x.Name == "Admin");
-                MessageBox.Show(newstaff.WorkPosition.Name);
                 addFunction.AddEmployee(newstaff);
                 load(null, null);
             }

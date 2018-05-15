@@ -19,6 +19,7 @@ namespace WpfApp8Window
     /// </summary>
     public partial class Window3 : MetroWindow
     {
+        UserControlOrder order = new UserControlOrder();
         public Window3()
         {
             InitializeComponent();
@@ -28,21 +29,45 @@ namespace WpfApp8Window
         {
             if (logoutUser.IsSelected)
             {
-                MainWindow main = new MainWindow();
-                App.Current.MainWindow = main;
-                this.Close();
-                main.Show();
+                if (order.ok.IsPressed == false)
+                {
+                    Dialog.IsOpen = true;
+                    if (yesButton.IsPressed)
+                    {
+                        yes(null, null);
+                    }
+                    else if (noButton.IsPressed)
+                    {
+                        no(null, null);
+                    }
+                }
             }
-            if (Order.IsSelected)
+
+           else if (Order.IsSelected)
             {
                 UserControlOrder order = new UserControlOrder();
                 ControlUser.Content = order;
+                Order.IsEnabled = false;
             }
         }
 
         private void MenuUser(object sender, RoutedEventArgs e)
         {
             splitUser.IsPaneOpen = !splitUser.IsPaneOpen;
+        }
+
+        private void no(object sender, RoutedEventArgs e)
+        {
+            Dialog.IsOpen = false;
+            logoutUser.IsSelected = false;
+        }
+
+        private void yes(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            App.Current.MainWindow = main;
+            this.Close();
+            main.Show();
         }
     }
 }

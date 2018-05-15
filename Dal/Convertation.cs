@@ -82,6 +82,70 @@ namespace Dal
             };
             return service;
         }
+        public static WriteOffMaterialsWCF ConvertWriteOffToBD(WriteOffMaterials writeOffMaterialwcf)
+        {
+            WriteOffMaterialsWCF writeOffMaterial = new WriteOffMaterialsWCF()
+            {
+                UsedQuantity = writeOffMaterialwcf.UsedQuantity,
+                Material = ConvertMaterialsToDB(writeOffMaterialwcf.Material)
+            };
+            return writeOffMaterial;
+        }
+        public static MaterialsWCF ConvertMaterialsToDB(Materials tmpMaterial)
+        {
+            MaterialsWCF getmaterial = null;
+            if (tmpMaterial is Balsam)
+            {
+                getmaterial = ConvertBalsamToWCF(tmpMaterial as Balsam);
+            }
+            else if (tmpMaterial is Shadows)
+            {
+                getmaterial = ConvertShadowToWCF(tmpMaterial as Shadows);
+            }
+            else if (tmpMaterial is Laque)
+            {
+                getmaterial = ConvertLaqueToWCF(tmpMaterial as Laque);
+            }
+            else if (tmpMaterial is HairColor)
+            {
+                getmaterial = ConvertColorToWCF(tmpMaterial as HairColor);
+            }
+            else if (tmpMaterial is Powder)
+            {
+                getmaterial =ConvertPowderToWCf(tmpMaterial as Powder);
+            }
+            else if (tmpMaterial is Foundation)
+            {
+                getmaterial = ConvertFoundationToWCF(tmpMaterial as Foundation);
+            }
+            else if (tmpMaterial is Mascara)
+            {
+                getmaterial = ConvertMascaraToWCF(tmpMaterial as Mascara);
+            }
+            else if (tmpMaterial is Lipstick)
+            {
+                getmaterial = ConvertLipstickToWCF(tmpMaterial as Lipstick);
+            }
+            else if (tmpMaterial is Shadows)
+            {
+                getmaterial = ConvertShadowToWCF(tmpMaterial as Shadows);
+            }
+            else if (tmpMaterial is NailBase)
+            {
+                getmaterial = ConvertBaseToWCf(tmpMaterial as NailBase);
+            }
+            else if (tmpMaterial is NailTop)
+            {
+                getmaterial = ConvertTopTOWcf(tmpMaterial as NailTop);
+            }
+            else if (tmpMaterial is NailPolish)
+            {
+                getmaterial = ConvertPolishToWCF(tmpMaterial as NailPolish);
+            }
+            return getmaterial;
+        }
+
+
         public static BalsamWCF ConvertBalsamToWCF(Balsam  Balsam)
         {
             BalsamWCF wcfBalsam = new BalsamWCF()

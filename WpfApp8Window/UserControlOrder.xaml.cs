@@ -21,6 +21,7 @@ namespace WpfApp8Window
     public partial class UserControlOrder : UserControl
     {
         GetFunction getFunction = new GetFunction();
+        List<Materials> materials = new List<Materials>();
         public UserControlOrder()
         {
             InitializeComponent();
@@ -46,50 +47,29 @@ namespace WpfApp8Window
 
         private void OkClick(object sender, RoutedEventArgs e)
         {
-            List<Materials> materials = new List<Materials>();
+
             materials.Add(ShampooGrid.SelectedItem as Materials);
-               MaterialsToOrder.ItemsSource = materials;
-            //foreach (var item in materials)
-            //{
-            //    item.Add(ShampooGrid.SelectedItem as Materials);
-            //    MaterialsToOrder.ItemsSource = item;
-            //}
+            //materials.Add(BalsamGrid.SelectedItem as Materials);
 
-
-
-            //foreach (var item in Shampoo.Items)
-            //{
-            //    if ((item as TabItem).IsSelected)
-            //    {
-
-            //    }
-            //}
-
-
-            //foreach (var item in Shampoo.Items)
-            //{
-            //   MessageBox.Show("Test1");
-            //    if ((item as TabItem).IsSelected)
-            //    {
-            //        MessageBox.Show("Test2");
-            //        if (((item as TabItem).Content as DataGrid).SelectedIndex >= 0)
-            //        {
-            //            MessageBox.Show("Test3");
-            //            materials.Add(item as Shampoo);
-            //            // MaterialsToOrder.DataContext = materials;
-            //            MaterialsToOrder.ItemsSource = materials;
-            //        }
-            //    }
-            //}
+            MaterialsToOrder.ItemsSource = null;
+            MaterialsToOrder.ItemsSource = materials;
 
         }
         private void cut_Checked(object sender, RoutedEventArgs e)
         {
-
             ShampooGrid.IsEnabled = true;
             BalsamGrid.IsEnabled = true;
             LaqueGrid.IsEnabled = true;
 
+            ColorGrid.IsEnabled = false;
+            TopGrid.IsEnabled = false;
+            BaseGrid.IsEnabled = false;
+            PolishGrid.IsEnabled = false;
+            FoundationGrid.IsEnabled = false;
+            PowderGrid.IsEnabled = false;
+            ShadowGrid.IsEnabled = false;
+            MascaraGrid.IsEnabled = false;
+            LipstickGrid.IsEnabled = false;
         }
 
         private void coloring_Checked(object sender, RoutedEventArgs e)
@@ -98,6 +78,15 @@ namespace WpfApp8Window
             BalsamGrid.IsEnabled = true;
             LaqueGrid.IsEnabled = true;
             ColorGrid.IsEnabled = true;
+
+            TopGrid.IsEnabled = false;
+            BaseGrid.IsEnabled = false;
+            PolishGrid.IsEnabled = false;
+            FoundationGrid.IsEnabled = false;
+            PowderGrid.IsEnabled = false;
+            ShadowGrid.IsEnabled = false;
+            MascaraGrid.IsEnabled = false;
+            LipstickGrid.IsEnabled = false;
         }
 
         private void manicure_Checked(object sender, RoutedEventArgs e)
@@ -105,6 +94,16 @@ namespace WpfApp8Window
             TopGrid.IsEnabled = true;
             BaseGrid.IsEnabled = true;
             PolishGrid.IsEnabled = true;
+
+            FoundationGrid.IsEnabled = false;
+            PowderGrid.IsEnabled = false;
+            ShadowGrid.IsEnabled = false;
+            MascaraGrid.IsEnabled = false;
+            LipstickGrid.IsEnabled = false;
+            ShampooGrid.IsEnabled = false;
+            BalsamGrid.IsEnabled = false;
+            LaqueGrid.IsEnabled = false;
+            ColorGrid.IsEnabled = false;
         }
 
         private void makeup_Checked(object sender, RoutedEventArgs e)
@@ -114,6 +113,40 @@ namespace WpfApp8Window
             ShadowGrid.IsEnabled = true;
             MascaraGrid.IsEnabled = true;
             LipstickGrid.IsEnabled = true;
+
+            ShampooGrid.IsEnabled = false;
+            BalsamGrid.IsEnabled = false;
+            LaqueGrid.IsEnabled = false;
+            ColorGrid.IsEnabled = false;
+            ColorGrid.IsEnabled = false;
+            TopGrid.IsEnabled = false;
+            BaseGrid.IsEnabled = false;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Window3 window3 = new Window3();
+        //public void Back()
+        //{
+        //    if (order.IsPressed == false)
+        //    {
+        //        Dialog.IsOpen = true;
+        //        if (yesButton.IsPressed)
+        //        {
+        //            MainWindow main = new MainWindow();
+        //            App.Current.MainWindow = main;
+        //            window3.Close();
+        //            main.Show();
+        //        }
+        //        else if (noButton.IsPressed)
+        //        {
+        //            Dialog.IsOpen = false;
+        //        }
+        //    }
+
+
+        //}
     }
 }
