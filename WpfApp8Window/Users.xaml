@@ -55,7 +55,6 @@
                 <DropShadowEffect BlurRadius="15"    ShadowDepth="1" Color="#FFBBBBBB"/>
             </Rectangle.Effect>
         </Rectangle>
-        <!--<materialDesign:PackIcon Grid.Column="1" Kind="ArrowLeft" Width="Auto" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="44,0,271,150" Grid.RowSpan="2"/>-->
             <DockPanel Grid.Column="3"  Grid.Row="1"  >
             <RadioButton x:Name="adminRadioButton" VerticalAlignment="Center" HorizontalAlignment="Center" > Admin</RadioButton>
             <RadioButton x:Name="employeeRadioButton" VerticalAlignment="Center" HorizontalAlignment="Center">Employee</RadioButton>

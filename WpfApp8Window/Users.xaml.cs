@@ -24,7 +24,7 @@ namespace WpfApp8Window
         AddFunction addFunction = new AddFunction();
         DeleteFunction deleteFunctionn = new DeleteFunction();
         List<WorkPosition> positions = new List<WorkPosition>();
-        
+
         public Users()
         {
             InitializeComponent();
@@ -32,36 +32,49 @@ namespace WpfApp8Window
         }
         private void add_Click(object sender, RoutedEventArgs e)
         {
+            UserExists userExists = new UserExists();
             Staff newstaff = new Staff();
             newstaff.Login = login.Text;
             newstaff.Password = pass.Text;
-            //foreach( var item in positions)
-            //{
-            //  //MessageBox.Show(item.Id.ToString() + item.Name);
-            //}
-            if(adminRadioButton.IsChecked==true)
+
+            if (adminRadioButton.IsChecked == true)
             {
-                //if (newstaff.Login==)
-                newstaff.WorkPosition = positions.First(x => x.Name == "Admin");
-                addFunction.AddEmployee(newstaff);
-                load(null, null);
+                if (getFunction.GetEmployees().FirstOrDefault(x => x.Login == login.Text) == null)
+                {
+                    newstaff.WorkPosition = positions.First(x => x.Name == "Admin");
+                    addFunction.AddEmployee(newstaff);
+                    load(null, null);
+                }
+                else
+                {
+                    userExists.Show();
+                }
             }
-            if(employeeRadioButton.IsChecked == true)
+            if (employeeRadioButton.IsChecked == true)
             {
-                newstaff.WorkPosition = positions.First(x => x.Name == "Employee");
-                addFunction.AddEmployee(newstaff);
-                load(null, null);
-            }        
+                if (getFunction.GetEmployees().FirstOrDefault(x => x.Login == login.Text) == null)
+                {
+                    newstaff.WorkPosition = positions.First(x => x.Name == "Employee");
+                    addFunction.AddEmployee(newstaff);
+                    load(null, null);
+                }
+                else
+                {
+                    userExists.Show();
+                }
+            }
+            login.Text = null;
+            pass.Text = null;
         }
         private void del_Click(object sender, RoutedEventArgs e)
-        { 
-                deleteFunctionn.DeleteEmployee((GridUser.SelectedItem as Staff).Id);
-                load(null, null);
+        {
+            deleteFunctionn.DeleteEmployee((GridUser.SelectedItem as Staff).Id);
+            load(null, null);
         }
         private void load(object sender, RoutedEventArgs e)
         {
             GridUser.ItemsSource = null;
-           GridUser.ItemsSource = getFunction.GetEmployees();
+            GridUser.ItemsSource = getFunction.GetEmployees();
         }
     }
 }

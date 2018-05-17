@@ -10,11 +10,10 @@ namespace Dal
     {
         
         private Service1Client client = new Service1Client();
-        //public List<string> WritingOff(List<WriteOffMaterials> writeOffMaterials)
-        //{
-        //    return client.WritingOff(writeOffMaterials.Select(x => Convertation.ConvertWriteOffToBD(x)).ToArray());
-            
-        //}
+        public List<string> WritingOff(List<WriteOffMaterials> writeOffMaterials)
+        {
+            return client.WritingOff(writeOffMaterials.Select(x => Convertation.ConvertWriteOffToBD(x)).ToArray()).ToList();
+        }
         public void AddEmployee(Staff staff)
         {
             client.AddEmployee(Convertation.ConvertStaffToWCF(staff));

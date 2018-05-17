@@ -70,107 +70,175 @@ namespace WpfApp8Window
             }
             load(null, null);
         }
-
+        private void EariseValues()
+        {
+            name.Text = null;
+            brand.Text = null;
+            price.Text = null;
+            volume.Text = null;
+            quantity.Text = null;
+            color.Text = null;
+            description.Text = null;
+        }
         private void AddShampoo()
         {
-       
             Shampoo shampoo = new Shampoo();
             shampoo.Name = name.Text;
             shampoo.Brand = brand.Text;
-          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
                 price.BorderBrush = Brushes.Red;
-               
                 return;
             }
+            else
+            {
+                price.BorderBrush = StandartBrush;
+            }
             shampoo.Price = newPrice;
-           if( !double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
                 volume.BorderBrush = Brushes.Red;
                 return;
             }
+            else
+            {
+                volume.BorderBrush = StandartBrush;
+            }
             shampoo.Volume = newVolume;
-           if(! int.TryParse(quantity.Text, out int newQuantity))
+            if (!int.TryParse(quantity.Text, out int newQuantity))
             {
                 quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             shampoo.QuantityBottles = newQuantity;
             shampoo.QuantityGeneralVolume = newQuantity * newVolume;
             shampoo.Description = description.Text;
             addFunction.AddShampooToDB(shampoo);
-            price.BorderBrush = StandartBrush;
-            volume.BorderBrush = StandartBrush;
-            quantity.BorderBrush = StandartBrush;
+            EariseValues();
         }
         private void AddBalsam()
         {
             Balsam balsam = new Balsam();
             balsam.Name = name.Text;
             balsam.Brand = brand.Text;
-            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             balsam.Price = newPrice;
-            if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            balsam.Volume = newVolume;
-            if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            balsam.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             balsam.QuantityBottles = newQuantity;
             balsam.QuantityGeneralVolume = newQuantity * newVolume;
+            addFunction.AddBalsamToDB(balsam);
+            EariseValues();
         }
         private void AddHairColor()
         {
             HairColor hairColor = new HairColor();
             hairColor.Name = name.Text;
             hairColor.Brand = brand.Text;
-          if( ! decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             hairColor.Price = newPrice;
-         if( !double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            hairColor.Volume = newVolume;
-            if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            hairColor.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             hairColor.QuantityBottles = newQuantity;
             hairColor.QuantityGeneralVolume = newQuantity * newVolume;
             hairColor.Description = description.Text;
             hairColor.Color = color.Text;
+            hairColor.QuntityCount = 60;
+            addFunction.AddColorToDB(hairColor);
+            EariseValues();
         }
         private void AddLaque()
         {
             Laque laque = new Laque();
             laque.Name = name.Text;
             laque.Brand = brand.Text;
-           if(! decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             laque.Price = newPrice;
-         if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            laque.Volume = newVolume;
-            if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            laque.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             laque.QuantityBottles = newQuantity;
             laque.QuantityGeneralVolume = newQuantity * newVolume;
-
+            addFunction.AddLaqueToDB(laque);
+            EariseValues();
         }
         private void AddFoundation()
         {
@@ -178,186 +246,320 @@ namespace WpfApp8Window
 
             foundation.Name = name.Text;
             foundation.Brand = brand.Text;
-            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             foundation.Price = newPrice;
-           if( !double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            foundation.Volume = newVolume;
-           if( !int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            foundation.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             foundation.QuantityBottles = newQuantity;
             foundation.QuantityGeneralVolume = newQuantity * newVolume;
             foundation.Color = color.Text;
             foundation.Description = description.Text;
+            addFunction.AddFoundationToDB(foundation);
+            EariseValues();
         }
         private void AddPowder()
         {
             Powder powder = new Powder();
             powder.Name = name.Text;
             powder.Brand = brand.Text;
-          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             powder.Price = newPrice;
-           if(! double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            powder.Volume = newVolume;
-          if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            powder.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             powder.QuantityBottles = newQuantity;
             powder.QuantityGeneralVolume = newQuantity * newVolume;
             powder.Color = color.Text;
+            addFunction.AddPowderToDB(powder);
+            EariseValues();
         }
         private void AddShadow()
         {
             Shadows shadows = new Shadows();
             shadows.Name = name.Text;
             shadows.Brand = brand.Text;
-            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             shadows.Price = newPrice;
-            if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            shadows.Volume = newVolume;
-           if( !int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            shadows.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             shadows.QuantityBottles = newQuantity;
             shadows.QuantityGeneralVolume = newQuantity * newVolume;
             shadows.Color = color.Text;
+            addFunction.AddShadowToDB(shadows);
+            EariseValues();
         }
         private void AddMascara()
         {
             Mascara mascara = new Mascara();
             mascara.Name = name.Text;
             mascara.Brand = brand.Text;
-            if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             mascara.Price = newPrice;
-          if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            mascara.Volume = newVolume;
-            if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            mascara.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             mascara.QuantityBottles = newQuantity;
             mascara.QuantityGeneralVolume = newQuantity * newVolume;
             mascara.Color = color.Text;
+            addFunction.AddMascaraToDB(mascara);
+            EariseValues();
         }
         private void AddLipstick()
         {
             Lipstick lipstick = new Lipstick();
             lipstick.Name = name.Text;
             lipstick.Brand = brand.Text;
-           if(! decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             lipstick.Price = newPrice;
-            if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            lipstick.Volume = newVolume;
-           if( !int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            lipstick.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             lipstick.QuantityBottles = newQuantity;
             lipstick.QuantityGeneralVolume = newQuantity * newVolume;
             lipstick.Color = color.Text;
             lipstick.Description = description.Text;
+            addFunction.AddLipstickToDB(lipstick);
+            EariseValues();
         }
         private void AddTop()
         {
             NailTop top = new NailTop();
             top.Name = name.Text;
             top.Brand = brand.Text;
-          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             top.Price = newPrice;
-            if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            top.Volume = newVolume;
-            if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            top.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             top.QuantityBottles = newQuantity;
             top.QuantityGeneralVolume = newQuantity * newVolume;
-
+            addFunction.AddTopToDB(top);
+            EariseValues();
         }
         private void AddBase()
         {
             NailBase nailBase = new NailBase();
             nailBase.Name = name.Text;
             nailBase.Brand = brand.Text;
-           if(! decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             nailBase.Price = newPrice;
-            if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            nailBase.Volume = newVolume;
-            if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            nailBase.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             nailBase.QuantityBottles = newQuantity;
             nailBase.QuantityGeneralVolume = newQuantity * newVolume;
+            addFunction.AddBaseToDB(nailBase);
+            EariseValues();
         }
         private void AddPolishNail()
         {
             NailPolish nailPolish = new NailPolish();
             nailPolish.Name = name.Text;
             nailPolish.Brand = brand.Text;
-          if(!decimal.TryParse(price.Text, out decimal newPrice))
+            if (!decimal.TryParse(price.Text, out decimal newPrice))
             {
+                price.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                price.BorderBrush = StandartBrush;
             }
             nailPolish.Price = newPrice;
-            if(!double.TryParse(volume.Text, out double newVolume))
+            if (!double.TryParse(volume.Text, out double newVolume))
             {
+                volume.BorderBrush = Brushes.Red;
                 return;
             }
-            nailPolish.Volume = newVolume;
-           if(!int.TryParse(quantity.Text, out int newQuantity))
+            else
             {
+                volume.BorderBrush = StandartBrush;
+            }
+            nailPolish.Volume = newVolume;
+            if (!int.TryParse(quantity.Text, out int newQuantity))
+            {
+                quantity.BorderBrush = Brushes.Red;
                 return;
+            }
+            else
+            {
+                quantity.BorderBrush = StandartBrush;
             }
             nailPolish.QuantityBottles = newQuantity;
             nailPolish.QuantityGeneralVolume = newQuantity * newVolume;
             nailPolish.Color = color.Text;
             addFunction.AddPolishToDB(nailPolish);
+            EariseValues();
         }
 
         private void buyProduct(object sender, RoutedEventArgs e)
@@ -366,9 +568,9 @@ namespace WpfApp8Window
             {
                 if ((item as TabItem).IsSelected)
                 {
-                    if (((item as TabItem).Content as DataGrid).SelectedIndex>=0)
+                    if (((item as TabItem).Content as DataGrid).SelectedIndex >= 0)
                     {
-                        if (quantityToBuy.Value!=null)
+                        if (quantityToBuy.Value != null)
                         {
                             Materials materials = ((item as TabItem).Content as DataGrid).SelectedItem as Materials;
                             int Id = materials.Id;
@@ -377,7 +579,7 @@ namespace WpfApp8Window
                             getFunction.GetChangedQuantity(quantityBottles, quantityGeneral, Id);
                             load(null, null);
                         }
-                    }       
+                    }
                 }
             }
         }
@@ -399,7 +601,7 @@ namespace WpfApp8Window
             GridBalsam.ItemsSource = null;
             GridBalsam.ItemsSource = getFunction.GetListBalsam();
             GridColor.ItemsSource = null;
-           GridColor.ItemsSource = getFunction.GetListColor();
+            GridColor.ItemsSource = getFunction.GetListColor();
             GridFoundation.ItemsSource = null;
             GridFoundation.ItemsSource = getFunction.GetListFoundation();
             GridLaque.ItemsSource = null;
@@ -413,7 +615,7 @@ namespace WpfApp8Window
             GridNailEnamel.ItemsSource = null;
             GridNailEnamel.ItemsSource = getFunction.GetListNailPolish();
             GridNailTop.ItemsSource = null;
-          GridNailTop.ItemsSource = getFunction.GetListNailTop();
+            GridNailTop.ItemsSource = getFunction.GetListNailTop();
             GridPowder.ItemsSource = null;
             GridPowder.ItemsSource = getFunction.GetListPowder();
             GridShadow.ItemsSource = null;

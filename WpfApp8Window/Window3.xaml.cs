@@ -24,12 +24,11 @@ namespace WpfApp8Window
         {
             InitializeComponent();
         }
-
         private void ListViewMenu_SelectionChangedUser(object sender, SelectionChangedEventArgs e)
         {
             if (logoutUser.IsSelected)
             {
-                if (order.ok.IsPressed == false)
+                if (order.materialsWritingoff.Count != 0)
                 {
                     Dialog.IsOpen = true;
                     if (yesButton.IsPressed)
@@ -41,27 +40,26 @@ namespace WpfApp8Window
                         no(null, null);
                     }
                 }
+                else
+                {
+                    yes(null, null);
+                }
             }
-
-           else if (Order.IsSelected)
+            else if (Order.IsSelected)
             {
-                UserControlOrder order = new UserControlOrder();
                 ControlUser.Content = order;
                 Order.IsEnabled = false;
             }
         }
-
         private void MenuUser(object sender, RoutedEventArgs e)
         {
             splitUser.IsPaneOpen = !splitUser.IsPaneOpen;
         }
-
         private void no(object sender, RoutedEventArgs e)
         {
             Dialog.IsOpen = false;
             logoutUser.IsSelected = false;
         }
-
         private void yes(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();

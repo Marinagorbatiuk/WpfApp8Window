@@ -78,11 +78,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LackOfMaterials.xaml.cs">
+      <DependentUpon>LackOfMaterials.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlMaterials.xaml.cs">
       <DependentUpon>UserControlMaterials.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlOrder.xaml.cs">
       <DependentUpon>UserControlOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserExists.xaml.cs">
+      <DependentUpon>UserExists.xaml</DependentUpon>
     </Compile>
     <Compile Include="Users.xaml.cs">
       <DependentUpon>Users.xaml</DependentUpon>
@@ -93,6 +99,10 @@
     <Compile Include="Window3.xaml.cs">
       <DependentUpon>Window3.xaml</DependentUpon>
     </Compile>
+    <Page Include="LackOfMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -110,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserExists.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

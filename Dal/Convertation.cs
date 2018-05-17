@@ -157,6 +157,7 @@ namespace Dal
                 QuantityGeneralVolume = Balsam.QuantityGeneralVolume,
                 Volume = Balsam.Volume,
                 Id = Balsam.Id,
+                QuntityCount=Balsam.QuntityCount
             };
             return wcfBalsam;
         }
@@ -170,7 +171,8 @@ namespace Dal
                 QuantityBottles = wcfBalsam.QuantityBottles,
                 QuantityGeneralVolume = wcfBalsam.QuantityGeneralVolume,
                 Volume = wcfBalsam.Volume,
-                Id = wcfBalsam.Id
+                Id = wcfBalsam.Id,
+                QuntityCount= wcfBalsam.QuntityCount
             };
             return balsam;
         }
@@ -187,7 +189,7 @@ namespace Dal
                 QuantityBottles = color.QuantityBottles,
                 QuantityGeneralVolume = color.QuantityGeneralVolume,
                 Description = color.Description,
-                //BllServices=dTOColor.Service
+                QuntityCount= color.QuntityCount
             };
             return wcfColor;
         }
@@ -204,6 +206,7 @@ namespace Dal
                 QuantityBottles = wcfColor.QuantityBottles,
                 QuantityGeneralVolume = wcfColor.QuantityGeneralVolume,
                 Description = wcfColor.Description,
+                QuntityCount=wcfColor.QuntityCount
             };
             return color;
         }
@@ -220,6 +223,7 @@ namespace Dal
                 QuantityBottles = foundation.QuantityBottles,
                 QuantityGeneralVolume = foundation.QuantityGeneralVolume,
                 Description = foundation.Description,
+                QuntityCount=foundation.QuntityCount
                 
             };
             return wcfFoundation;
@@ -237,6 +241,7 @@ namespace Dal
                 QuantityBottles = wcfFoundation.QuantityBottles,
                 QuantityGeneralVolume = wcfFoundation.QuantityGeneralVolume,
                 Description = wcfFoundation.Description,
+                QuntityCount=wcfFoundation.QuntityCount
             };
             return foundation;
         }
@@ -251,7 +256,7 @@ namespace Dal
                 Volume = laque.Volume,
                 QuantityBottles = laque.QuantityBottles,
                 QuantityGeneralVolume = laque.QuantityGeneralVolume,
-
+                QuntityCount=laque.QuntityCount
             };
 
             return wcfLaque;
@@ -267,6 +272,7 @@ namespace Dal
                 Volume = wcfLaque.Volume,
                 QuantityBottles = wcfLaque.QuantityBottles,
                 QuantityGeneralVolume = wcfLaque.QuantityGeneralVolume,
+                QuntityCount=wcfLaque.QuntityCount
             };
             return laque;
         }
@@ -283,6 +289,7 @@ namespace Dal
                 QuantityBottles = lipstick.QuantityBottles,
                 QuantityGeneralVolume = lipstick.QuantityGeneralVolume,
                 Description = lipstick.Description,
+                QuntityCount=lipstick.QuntityCount
             };
 
             return wcfLipstick;
@@ -300,6 +307,7 @@ namespace Dal
                 QuantityBottles = wcfLipstick.QuantityBottles,
                 QuantityGeneralVolume = wcfLipstick.QuantityGeneralVolume,
                 Description = wcfLipstick.Description,
+                QuntityCount= wcfLipstick.QuntityCount
             };
             return lipstick;
         }
@@ -315,6 +323,7 @@ namespace Dal
                 Volume = mascara.Volume,
                 QuantityBottles = mascara.QuantityBottles,
                 QuantityGeneralVolume = mascara.QuantityGeneralVolume,
+                QuntityCount=mascara.QuntityCount
             };
             return wcfmascara;
         }
@@ -330,6 +339,7 @@ namespace Dal
                 Volume = wcfMascara.Volume,
                 QuantityBottles = wcfMascara.QuantityBottles,
                 QuantityGeneralVolume = wcfMascara.QuantityGeneralVolume,
+                QuntityCount=wcfMascara.QuntityCount
             };
             return mascara;
         }
@@ -344,6 +354,7 @@ namespace Dal
                 Volume = nailBase.Volume,
                 QuantityBottles = nailBase.QuantityBottles,
                 QuantityGeneralVolume = nailBase.QuantityGeneralVolume,
+                QuntityCount=nailBase.QuntityCount
             };
 
             return wcfNailBase;
@@ -359,6 +370,7 @@ namespace Dal
                 Volume = wcfNailBase.Volume,
                 QuantityBottles = wcfNailBase.QuantityBottles,
                 QuantityGeneralVolume = wcfNailBase.QuantityGeneralVolume,
+                QuntityCount=wcfNailBase.QuntityCount
             };
             return nailBase;
         }
@@ -373,7 +385,8 @@ namespace Dal
                 Volume = polish.Volume,
                 QuantityBottles = polish.QuantityBottles,
                 QuantityGeneralVolume = polish.QuantityGeneralVolume,
-                Color = polish.Color
+                Color = polish.Color,
+                QuntityCount=polish.QuntityCount
             };
             return wcfNailPolish;
         }
@@ -388,7 +401,8 @@ namespace Dal
                 Volume = wcfNailPolish.Volume,
                 QuantityBottles = wcfNailPolish.QuantityBottles,
                 QuantityGeneralVolume = wcfNailPolish.QuantityGeneralVolume,
-                Color = wcfNailPolish.Color
+                Color = wcfNailPolish.Color,
+                QuntityCount= wcfNailPolish.QuntityCount
             };
             return polish;
         }
@@ -403,6 +417,7 @@ namespace Dal
                 Volume = nailTop.Volume,
                 QuantityBottles = nailTop.QuantityBottles,
                 QuantityGeneralVolume = nailTop.QuantityGeneralVolume,
+                QuntityCount=nailTop.QuntityCount
             };
 
             return topWCF;
@@ -418,6 +433,7 @@ namespace Dal
                 Volume = wcfNailTop.Volume,
                 QuantityBottles = wcfNailTop.QuantityBottles,
                 QuantityGeneralVolume = wcfNailTop.QuantityGeneralVolume,
+                QuntityCount=wcfNailTop.QuntityCount
             };
             return nailTop;
         }
@@ -432,7 +448,8 @@ namespace Dal
                 Volume = powder.Volume,
                 QuantityBottles = powder.QuantityBottles,
                 QuantityGeneralVolume = powder.QuantityGeneralVolume,
-                Color = powder.Color
+                Color = powder.Color,
+                QuntityCount=powder.QuntityCount
             };
             return wcfPowder;
         }
@@ -447,7 +464,8 @@ namespace Dal
                 Volume = wcfPowder.Volume,
                 QuantityBottles = wcfPowder.QuantityBottles,
                 QuantityGeneralVolume = wcfPowder.QuantityGeneralVolume,
-                Color = wcfPowder.Color
+                Color = wcfPowder.Color,
+                QuntityCount=wcfPowder.QuntityCount
             };
             return powder;
         }
@@ -462,7 +480,8 @@ namespace Dal
                 Volume = shadows.Volume,
                 QuantityBottles = shadows.QuantityBottles,
                 QuantityGeneralVolume = shadows.QuantityGeneralVolume,
-                Color = shadows.Color
+                Color = shadows.Color,
+                QuntityCount=shadows.QuntityCount
             };
             return wcfShadows;
         }
@@ -478,6 +497,7 @@ namespace Dal
                 QuantityBottles = wcfShadows.QuantityBottles,
                 QuantityGeneralVolume = wcfShadows.QuantityGeneralVolume,
                 Color = wcfShadows.Color,
+                QuntityCount=wcfShadows.QuntityCount
             };
             return shadows;
         }
@@ -492,7 +512,8 @@ namespace Dal
                 Volume = shampoo.Volume,
                 QuantityBottles = shampoo.QuantityBottles,
                 QuantityGeneralVolume = shampoo.QuantityGeneralVolume,
-                Description = shampoo.Description
+                Description = shampoo.Description,
+                QuntityCount=shampoo.QuntityCount
             };
             return wcfShampoo;
         }
@@ -507,7 +528,8 @@ namespace Dal
                 Volume = wcfShampoo.Volume,
                 QuantityBottles = wcfShampoo.QuantityBottles,
                 QuantityGeneralVolume = wcfShampoo.QuantityGeneralVolume,
-                Description = wcfShampoo.Description
+                Description = wcfShampoo.Description,
+                QuntityCount=wcfShampoo.QuntityCount
             };
             return shampoo;
         }

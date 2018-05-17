@@ -264,18 +264,18 @@ namespace Dal.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MaterialsWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.ShadowsWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.BalsamWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.ShampooWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.LaqueWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.ColorWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.FoundationWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.PowderWCF))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.ShadowsWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.MascaraWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.LipstickWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.NailTopWCF))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.NailBaseWCF))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.NailPolishWCF))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Dal.ServiceReference1.NailBaseWCF))]
     public partial class MaterialsWCF : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -447,6 +447,29 @@ namespace Dal.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ShadowsWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
+    [System.SerializableAttribute()]
+    public partial class ShadowsWCF : Dal.ServiceReference1.MaterialsWCF {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Color {
+            get {
+                return this.ColorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorField, value) != true)) {
+                    this.ColorField = value;
+                    this.RaisePropertyChanged("Color");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BalsamWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
     [System.SerializableAttribute()]
     public partial class BalsamWCF : Dal.ServiceReference1.MaterialsWCF {
@@ -585,29 +608,6 @@ namespace Dal.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ShadowsWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
-    [System.SerializableAttribute()]
-    public partial class ShadowsWCF : Dal.ServiceReference1.MaterialsWCF {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ColorField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Color {
-            get {
-                return this.ColorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ColorField, value) != true)) {
-                    this.ColorField = value;
-                    this.RaisePropertyChanged("Color");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MascaraWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
     [System.SerializableAttribute()]
     public partial class MascaraWCF : Dal.ServiceReference1.MaterialsWCF {
@@ -677,13 +677,6 @@ namespace Dal.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NailBaseWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
-    [System.SerializableAttribute()]
-    public partial class NailBaseWCF : Dal.ServiceReference1.MaterialsWCF {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="NailPolishWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
     [System.SerializableAttribute()]
     public partial class NailPolishWCF : Dal.ServiceReference1.MaterialsWCF {
@@ -703,6 +696,13 @@ namespace Dal.ServiceReference1 {
                 }
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NailBaseWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
+    [System.SerializableAttribute()]
+    public partial class NailBaseWCF : Dal.ServiceReference1.MaterialsWCF {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]

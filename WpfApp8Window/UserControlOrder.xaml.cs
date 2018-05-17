@@ -20,40 +20,131 @@ namespace WpfApp8Window
     /// </summary>
     public partial class UserControlOrder : UserControl
     {
+        AddFunction addFunction = new AddFunction();
         GetFunction getFunction = new GetFunction();
-        List<Materials> materials = new List<Materials>();
+        public List<WriteOffMaterials> materialsWritingoff = new List<WriteOffMaterials>();
         public UserControlOrder()
         {
             InitializeComponent();
 
         }
-
-
         private void load(object sender, RoutedEventArgs e)
         {
+            MaterialsToOrder.ItemsSource = null;
+            MaterialsToOrder.ItemsSource = materialsWritingoff;
+            ShampooGrid.ItemsSource = null;
             ShampooGrid.ItemsSource = getFunction.GetListShampoo();
+            BalsamGrid.ItemsSource = null;
             BalsamGrid.ItemsSource = getFunction.GetListBalsam();
+            LaqueGrid.ItemsSource = null;
             LaqueGrid.ItemsSource = getFunction.GetListLaque();
+            ColorGrid.ItemsSource = null;
             ColorGrid.ItemsSource = getFunction.GetListColor();
+            FoundationGrid.ItemsSource = null;
             FoundationGrid.ItemsSource = getFunction.GetListFoundation();
+            PowderGrid.ItemsSource = null;
             PowderGrid.ItemsSource = getFunction.GetListPowder();
+            ShadowGrid.ItemsSource = null;
             ShadowGrid.ItemsSource = getFunction.GetListShadow();
+            MascaraGrid.ItemsSource = null;
             MascaraGrid.ItemsSource = getFunction.GetListMascara();
+            LipstickGrid.ItemsSource = null;
             LipstickGrid.ItemsSource = getFunction.GetListLipstick();
+            TopGrid.ItemsSource = null;
             TopGrid.ItemsSource = getFunction.GetListNailTop();
+            BaseGrid.ItemsSource = null;
             BaseGrid.ItemsSource = getFunction.GetListNailBase();
+            PolishGrid.ItemsSource = null;
             PolishGrid.ItemsSource = getFunction.GetListNailPolish();
         }
-
         private void OkClick(object sender, RoutedEventArgs e)
+        {           
+
+            if (ShampooGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(ShampooGrid.SelectedItem as Materials);
+            }
+            if (BalsamGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(BalsamGrid.SelectedItem as Materials);
+            }
+            if (ColorGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(ColorGrid.SelectedItem as Materials);
+            }
+            if (LaqueGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(LaqueGrid.SelectedItem as Materials);
+            }
+            if (FoundationGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(FoundationGrid.SelectedItem as Materials);
+            }
+            if (PowderGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(PowderGrid.SelectedItem as Materials);
+            }
+            if (ShadowGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(ShadowGrid.SelectedItem as Materials);
+            }
+            if (MascaraGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(MascaraGrid.SelectedItem as Materials);
+            }
+            if (LipstickGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(LipstickGrid.SelectedItem as Materials);
+            }
+            if (BaseGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(BaseGrid.SelectedItem as Materials);
+            }
+            if (PolishGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(PolishGrid.SelectedItem as Materials);
+            }
+            if (TopGrid.SelectedIndex > -1)
+            {
+                WritingDownMaterials(TopGrid.SelectedItem as Materials);
+            }
+            CleanGrid();
+            MaterialsToOrder.ItemsSource = null;
+            MaterialsToOrder.ItemsSource = materialsWritingoff;
+        }
+        private void WritingDownMaterials(Materials material)
         {
 
-            materials.Add(ShampooGrid.SelectedItem as Materials);
-            //materials.Add(BalsamGrid.SelectedItem as Materials);
+            WriteOffMaterials offMaterials = materialsWritingoff.FirstOrDefault(x => x.Material.Id == material.Id);
+            if (offMaterials != null)
+            {
+                offMaterials.UsedQuantity += 1;
+            }
+            else
+            {
+                offMaterials = new WriteOffMaterials()
+                {
+                    UsedQuantity = 1,
+                    Material = material
+                };
+                materialsWritingoff.Add(offMaterials);
+            }
 
-            MaterialsToOrder.ItemsSource = null;
-            MaterialsToOrder.ItemsSource = materials;
-
+        }
+        private void CleanGrid()
+        {
+            ShampooGrid.SelectedItems.Clear();
+            BalsamGrid.SelectedItems.Clear();
+            LaqueGrid.SelectedItems.Clear();
+            ColorGrid.SelectedItems.Clear();
+            FoundationGrid.SelectedItems.Clear();
+            PowderGrid.SelectedItems.Clear();
+            ShadowGrid.SelectedItems.Clear();
+            MascaraGrid.SelectedItems.Clear();
+            LipstickGrid.SelectedItems.Clear();
+            BaseGrid.SelectedItems.Clear();
+            PolishGrid.SelectedItems.Clear();
+            TopGrid.SelectedItems.Clear();
         }
         private void cut_Checked(object sender, RoutedEventArgs e)
         {
@@ -105,7 +196,6 @@ namespace WpfApp8Window
             LaqueGrid.IsEnabled = false;
             ColorGrid.IsEnabled = false;
         }
-
         private void makeup_Checked(object sender, RoutedEventArgs e)
         {
             FoundationGrid.IsEnabled = true;
@@ -122,31 +212,32 @@ namespace WpfApp8Window
             TopGrid.IsEnabled = false;
             BaseGrid.IsEnabled = false;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            LackOfMaterials ofMaterials = new LackOfMaterials();
+            List<string> notEnougtMaterials = addFunction.WritingOff(materialsWritingoff);
+            string lackMaterials = string.Empty;
+            notEnougtMaterials.Select(x => lackMaterials += x + "\n").ToArray();
+            materialsWritingoff.Clear();
+            ofMaterials.materialsLack.Text = lackMaterials;
+            if (notEnougtMaterials.Count != 0)
+            {
+               ofMaterials.Show();
+            }
+            load(null, null);
         }
-        //Window3 window3 = new Window3();
-        //public void Back()
-        //{
-        //    if (order.IsPressed == false)
-        //    {
-        //        Dialog.IsOpen = true;
-        //        if (yesButton.IsPressed)
-        //        {
-        //            MainWindow main = new MainWindow();
-        //            App.Current.MainWindow = main;
-        //            window3.Close();
-        //            main.Show();
-        //        }
-        //        else if (noButton.IsPressed)
-        //        {
-        //            Dialog.IsOpen = false;
-        //        }
-        //    }
+        private void DeleteButton(object sender, RoutedEventArgs e)
+        {
+            if (MaterialsToOrder.SelectedIndex > -1)
+            {
+                materialsWritingoff.Remove(MaterialsToOrder.SelectedItem as WriteOffMaterials);
+                load(null, null);
+            }
+        }
 
-
-        //}
+        private void focus(object sender, RoutedEventArgs e)
+        {
+            (sender as DataGrid).SelectedIndex = -1;
+        }
     }
 }
