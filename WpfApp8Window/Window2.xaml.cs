@@ -48,6 +48,16 @@ namespace WpfApp8Window
                 Users user = new Users();
                 control.Content = user;
             }
+            if(statistics.IsSelected)
+            {
+                Statistics statisticsControl = new Statistics();
+                control.Content = statisticsControl;
+            }
+            if ( actions.IsSelected)
+            {
+                Actions actionControl = new Actions();
+                control.Content = actionControl;
+            }
         }
     }
 }
