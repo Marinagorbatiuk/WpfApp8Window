@@ -9,6 +9,13 @@ namespace Dal
    public class GetFunction
     {
         private Service1Client client = new Service1Client();
+
+        public ICollection<Info> GetLoggs()
+        {
+
+            return client.GetLoggs().Select(x => Convertation.ConvertToBllInfo(x)).ToList();
+        }
+
         public Staff GetUserAutorization(string login, string password)
         {
             Staff staff = null;
@@ -45,95 +52,89 @@ namespace Dal
         {
             List<Staff> Staffs = new List<Staff>();
             Staffs = client.GetEmployees().Select(x => Convertation.ConvertStaffToDal(x)).ToList();
+
             return Staffs;
         }
-        public List<Shadows> GetListShadow()
+        public List<Material> GetMaterials()
         {
-            List<Shadows> ShadowList = new List<Shadows>();
-            ShadowList = client.GetListShadow().Select(x => Convertation.ConvertShadowToDAl(x)).ToList();
-            return ShadowList;
+            return client.GetListMaterials().Select(x => Convertation.ConvertWcfMaterials(x)).ToList();
         }
-        public List<Shampoo> GetListShampoo()
-        {
-            List<Shampoo> ShampoosList = new List<Shampoo>();
-            ShampoosList = client.GetListShampoo().Select(x => Convertation.ConvertShampooToDal(x)).ToList();
-            return ShampoosList;
-        }
-        public List<Balsam> GetListBalsam()
-        {
-
-            List<Balsam> BalsamList = new List<Balsam>();
-            BalsamList = client.GetListBalsam().Select(x => Convertation.ConvertBalsamToDAL(x)).ToList();
-            return BalsamList;
-        }
-        public List<HairColor> GetListColor()
-        {
-            List<HairColor> ColorList = new List<HairColor>();
-            ColorList = client.GetListColor().Select(x => Convertation.ConvertColorToDal(x)).ToList();
-            return ColorList;
-        }
-        public List<Foundation> GetListFoundation()
-        {
-            List<Foundation> FoundationList = new List<Foundation>();
-            FoundationList = client.GetListFoundation().Select(x => Convertation.ConvertFoundationToDal(x)).ToList();
-            return FoundationList;
-        }
-
-        public List<Laque> GetListLaque()
-        {
-            List<Laque> LaqueList = new List<Laque>();
-            LaqueList = client.GetListLaque().Select(x => Convertation.ConvertLaqueToDal(x)).ToList();
-            return LaqueList;
-        }
-        public List<Lipstick> GetListLipstick()
-        {
-            List<Lipstick> LipstickList = new List<Lipstick>();
-            LipstickList = client.GetListLipstick().Select(x => Convertation.ConvertLipstickToDal(x)).ToList();
-            return LipstickList;
-        }
-        public List<Mascara> GetListMascara()
-        {
-            List<Mascara> MascaraList = new List<Mascara>();
-            MascaraList = client.GetListMascara().Select(x => Convertation.ConvertMascaraToDal(x)).ToList();
-            return MascaraList;
-        }
-        public List<NailBase> GetListNailBase()
-        {
-            List<NailBase> BaseList = new List<NailBase>();
-            BaseList = client.GetListBase().Select(x => Convertation.ConvertBaseToDAL(x)).ToList();
-            return BaseList;
-        }
-
-        public List<NailPolish> GetListNailPolish()
-        {
-            List<NailPolish> PolishList = new List<NailPolish>();
-            PolishList = client.GetListPolish().Select(x => Convertation.ConvertPolishToDal(x)).ToList();
-            return PolishList;
-        }
-        public List<NailTop> GetListNailTop()
-        {
-            List<NailTop> TopList = new List<NailTop>();
-            TopList = client.GetListTop().Select(x => Convertation.ConvertTopToDal(x)).ToList();
-            return TopList;
-        }
-        public List<Powder> GetListPowder()
-        {
-            
-            List<Powder> PowderList = new List<Powder>();
-            PowderList = client.GetListPowder().Select(x => Convertation.ConvertPowderToDAL(x)).ToList();
-            return PowderList;
-        }
-        //public List<ServicesWCF> GetListServices()
+        //public List<Shadows> GetListShadow()
         //{
-        //    List<ServicesWCF> getlistServices = new List<ServicesWCF>();
-        //    List<Services> tmplistServices = client.GetServices();
-        //    getlistServices.AddRange(tmplistServices.Select(x => new ServicesWCF
-        //    {
-        //        Name = x.Name,
-        //        Price = x.Price,
-        //        WCFMaterials = new List<MaterialsWCF>(x.BllMaterials.Select(y => ConvertationsWCF.ConvertWcfMaterials(y)).ToList())
-        //    }).ToList());
-        //    return getlistServices;
+        //    List<Shadows> ShadowList = new List<Shadows>();
+        //    ShadowList = client.GetListShadow().Select(x => Convertation.ConvertShadowToDAl(x)).ToList();
+        //    return ShadowList;
         //}
+        //public List<Shampoo> GetListShampoo()
+        //{
+        //    List<Shampoo> ShampoosList = new List<Shampoo>();
+        //    ShampoosList = client.GetListShampoo().Select(x => Convertation.ConvertShampooToDal(x)).ToList();
+        //    return ShampoosList;
+        //}
+        //public List<Balsam> GetListBalsam()
+        //{
+
+        //    List<Balsam> BalsamList = new List<Balsam>();
+        //    BalsamList = client.GetListBalsam().Select(x => Convertation.ConvertBalsamToDAL(x)).ToList();
+        //    return BalsamList;
+        //}
+        //public List<HairColor> GetListColor()
+        //{
+        //    List<HairColor> ColorList = new List<HairColor>();
+        //    ColorList = client.GetListColor().Select(x => Convertation.ConvertColorToDal(x)).ToList();
+        //    return ColorList;
+        //}
+        //public List<Foundation> GetListFoundation()
+        //{
+        //    List<Foundation> FoundationList = new List<Foundation>();
+        //    FoundationList = client.GetListFoundation().Select(x => Convertation.ConvertFoundationToDal(x)).ToList();
+        //    return FoundationList;
+        //}
+
+        //public List<Laque> GetListLaque()
+        //{
+        //    List<Laque> LaqueList = new List<Laque>();
+        //    LaqueList = client.GetListLaque().Select(x => Convertation.ConvertLaqueToDal(x)).ToList();
+        //    return LaqueList;
+        //}
+        //public List<Lipstick> GetListLipstick()
+        //{
+        //    List<Lipstick> LipstickList = new List<Lipstick>();
+        //    LipstickList = client.GetListLipstick().Select(x => Convertation.ConvertLipstickToDal(x)).ToList();
+        //    return LipstickList;
+        //}
+        //public List<Mascara> GetListMascara()
+        //{
+        //    List<Mascara> MascaraList = new List<Mascara>();
+        //    MascaraList = client.GetListMascara().Select(x => Convertation.ConvertMascaraToDal(x)).ToList();
+        //    return MascaraList;
+        //}
+        //public List<NailBase> GetListNailBase()
+        //{
+        //    List<NailBase> BaseList = new List<NailBase>();
+        //    BaseList = client.GetListBase().Select(x => Convertation.ConvertBaseToDAL(x)).ToList();
+        //    return BaseList;
+        //}
+
+        //public List<NailPolish> GetListNailPolish()
+        //{
+        //    List<NailPolish> PolishList = new List<NailPolish>();
+        //    PolishList = client.GetListPolish().Select(x => Convertation.ConvertPolishToDal(x)).ToList();
+        //    return PolishList;
+        //}
+        //public List<NailTop> GetListNailTop()
+        //{
+        //    List<NailTop> TopList = new List<NailTop>();
+        //    TopList = client.GetListTop().Select(x => Convertation.ConvertTopToDal(x)).ToList();
+        //    return TopList;
+        //}
+        //public List<Powder> GetListPowder()
+        //{
+            
+        //    List<Powder> PowderList = new List<Powder>();
+        //    PowderList = client.GetListPowder().Select(x => Convertation.ConvertPowderToDAL(x)).ToList();
+        //    return PowderList;
+        //}
+  
     }
 }

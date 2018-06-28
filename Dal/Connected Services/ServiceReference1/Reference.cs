@@ -798,6 +798,131 @@ namespace Dal.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InfoWCF", Namespace="http://schemas.datacontract.org/2004/07/WcfService")]
+    [System.SerializableAttribute()]
+    public partial class InfoWCF : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ActionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ActionTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InputParametersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoginField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OutputParametersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Action {
+            get {
+                return this.ActionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ActionField, value) != true)) {
+                    this.ActionField = value;
+                    this.RaisePropertyChanged("Action");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ActionTime {
+            get {
+                return this.ActionTimeField;
+            }
+            set {
+                if ((this.ActionTimeField.Equals(value) != true)) {
+                    this.ActionTimeField = value;
+                    this.RaisePropertyChanged("ActionTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string InputParameters {
+            get {
+                return this.InputParametersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InputParametersField, value) != true)) {
+                    this.InputParametersField = value;
+                    this.RaisePropertyChanged("InputParameters");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Login {
+            get {
+                return this.LoginField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoginField, value) != true)) {
+                    this.LoginField = value;
+                    this.RaisePropertyChanged("Login");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OutputParameters {
+            get {
+                return this.OutputParametersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OutputParametersField, value) != true)) {
+                    this.OutputParametersField = value;
+                    this.RaisePropertyChanged("OutputParameters");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -826,77 +951,11 @@ namespace Dal.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListPositions", ReplyAction="http://tempuri.org/IService1/GetListPositionsResponse")]
         System.Threading.Tasks.Task<Dal.ServiceReference1.WorkPositionWCF[]> GetListPositionsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListBalsam", ReplyAction="http://tempuri.org/IService1/GetListBalsamResponse")]
-        Dal.ServiceReference1.BalsamWCF[] GetListBalsam();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListMaterials", ReplyAction="http://tempuri.org/IService1/GetListMaterialsResponse")]
+        Dal.ServiceReference1.MaterialsWCF[] GetListMaterials();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListBalsam", ReplyAction="http://tempuri.org/IService1/GetListBalsamResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.BalsamWCF[]> GetListBalsamAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListShampoo", ReplyAction="http://tempuri.org/IService1/GetListShampooResponse")]
-        Dal.ServiceReference1.ShampooWCF[] GetListShampoo();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListShampoo", ReplyAction="http://tempuri.org/IService1/GetListShampooResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.ShampooWCF[]> GetListShampooAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListLaque", ReplyAction="http://tempuri.org/IService1/GetListLaqueResponse")]
-        Dal.ServiceReference1.LaqueWCF[] GetListLaque();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListLaque", ReplyAction="http://tempuri.org/IService1/GetListLaqueResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.LaqueWCF[]> GetListLaqueAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListColor", ReplyAction="http://tempuri.org/IService1/GetListColorResponse")]
-        Dal.ServiceReference1.ColorWCF[] GetListColor();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListColor", ReplyAction="http://tempuri.org/IService1/GetListColorResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.ColorWCF[]> GetListColorAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListFoundation", ReplyAction="http://tempuri.org/IService1/GetListFoundationResponse")]
-        Dal.ServiceReference1.FoundationWCF[] GetListFoundation();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListFoundation", ReplyAction="http://tempuri.org/IService1/GetListFoundationResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.FoundationWCF[]> GetListFoundationAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListPowder", ReplyAction="http://tempuri.org/IService1/GetListPowderResponse")]
-        Dal.ServiceReference1.PowderWCF[] GetListPowder();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListPowder", ReplyAction="http://tempuri.org/IService1/GetListPowderResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.PowderWCF[]> GetListPowderAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListShadow", ReplyAction="http://tempuri.org/IService1/GetListShadowResponse")]
-        Dal.ServiceReference1.ShadowsWCF[] GetListShadow();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListShadow", ReplyAction="http://tempuri.org/IService1/GetListShadowResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.ShadowsWCF[]> GetListShadowAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListMascara", ReplyAction="http://tempuri.org/IService1/GetListMascaraResponse")]
-        Dal.ServiceReference1.MascaraWCF[] GetListMascara();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListMascara", ReplyAction="http://tempuri.org/IService1/GetListMascaraResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.MascaraWCF[]> GetListMascaraAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListLipstick", ReplyAction="http://tempuri.org/IService1/GetListLipstickResponse")]
-        Dal.ServiceReference1.LipstickWCF[] GetListLipstick();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListLipstick", ReplyAction="http://tempuri.org/IService1/GetListLipstickResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.LipstickWCF[]> GetListLipstickAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListTop", ReplyAction="http://tempuri.org/IService1/GetListTopResponse")]
-        Dal.ServiceReference1.NailTopWCF[] GetListTop();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListTop", ReplyAction="http://tempuri.org/IService1/GetListTopResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.NailTopWCF[]> GetListTopAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListBase", ReplyAction="http://tempuri.org/IService1/GetListBaseResponse")]
-        Dal.ServiceReference1.NailBaseWCF[] GetListBase();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListBase", ReplyAction="http://tempuri.org/IService1/GetListBaseResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.NailBaseWCF[]> GetListBaseAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListPolish", ReplyAction="http://tempuri.org/IService1/GetListPolishResponse")]
-        Dal.ServiceReference1.NailPolishWCF[] GetListPolish();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListPolish", ReplyAction="http://tempuri.org/IService1/GetListPolishResponse")]
-        System.Threading.Tasks.Task<Dal.ServiceReference1.NailPolishWCF[]> GetListPolishAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListMaterials", ReplyAction="http://tempuri.org/IService1/GetListMaterialsResponse")]
+        System.Threading.Tasks.Task<Dal.ServiceReference1.MaterialsWCF[]> GetListMaterialsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteProduct", ReplyAction="http://tempuri.org/IService1/DeleteProductResponse")]
         void DeleteProduct(int id);
@@ -922,77 +981,11 @@ namespace Dal.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEmployee", ReplyAction="http://tempuri.org/IService1/AddEmployeeResponse")]
         System.Threading.Tasks.Task AddEmployeeAsync(Dal.ServiceReference1.StaffWCF staffWCF);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddShampoo", ReplyAction="http://tempuri.org/IService1/AddShampooResponse")]
-        void AddShampoo(Dal.ServiceReference1.ShampooWCF shampooWCF);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddMaterials", ReplyAction="http://tempuri.org/IService1/AddMaterialsResponse")]
+        void AddMaterials(Dal.ServiceReference1.MaterialsWCF materialsWCF);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddShampoo", ReplyAction="http://tempuri.org/IService1/AddShampooResponse")]
-        System.Threading.Tasks.Task AddShampooAsync(Dal.ServiceReference1.ShampooWCF shampooWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddBalsam", ReplyAction="http://tempuri.org/IService1/AddBalsamResponse")]
-        void AddBalsam(Dal.ServiceReference1.BalsamWCF balsamWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddBalsam", ReplyAction="http://tempuri.org/IService1/AddBalsamResponse")]
-        System.Threading.Tasks.Task AddBalsamAsync(Dal.ServiceReference1.BalsamWCF balsamWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddColor", ReplyAction="http://tempuri.org/IService1/AddColorResponse")]
-        void AddColor(Dal.ServiceReference1.ColorWCF colorWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddColor", ReplyAction="http://tempuri.org/IService1/AddColorResponse")]
-        System.Threading.Tasks.Task AddColorAsync(Dal.ServiceReference1.ColorWCF colorWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddLaque", ReplyAction="http://tempuri.org/IService1/AddLaqueResponse")]
-        void AddLaque(Dal.ServiceReference1.LaqueWCF laqueWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddLaque", ReplyAction="http://tempuri.org/IService1/AddLaqueResponse")]
-        System.Threading.Tasks.Task AddLaqueAsync(Dal.ServiceReference1.LaqueWCF laqueWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddFoundation", ReplyAction="http://tempuri.org/IService1/AddFoundationResponse")]
-        void AddFoundation(Dal.ServiceReference1.FoundationWCF foundationWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddFoundation", ReplyAction="http://tempuri.org/IService1/AddFoundationResponse")]
-        System.Threading.Tasks.Task AddFoundationAsync(Dal.ServiceReference1.FoundationWCF foundationWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddPowder", ReplyAction="http://tempuri.org/IService1/AddPowderResponse")]
-        void AddPowder(Dal.ServiceReference1.PowderWCF powderWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddPowder", ReplyAction="http://tempuri.org/IService1/AddPowderResponse")]
-        System.Threading.Tasks.Task AddPowderAsync(Dal.ServiceReference1.PowderWCF powderWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddShadow", ReplyAction="http://tempuri.org/IService1/AddShadowResponse")]
-        void AddShadow(Dal.ServiceReference1.ShadowsWCF shadowsWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddShadow", ReplyAction="http://tempuri.org/IService1/AddShadowResponse")]
-        System.Threading.Tasks.Task AddShadowAsync(Dal.ServiceReference1.ShadowsWCF shadowsWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddMascara", ReplyAction="http://tempuri.org/IService1/AddMascaraResponse")]
-        void AddMascara(Dal.ServiceReference1.MascaraWCF mascaraWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddMascara", ReplyAction="http://tempuri.org/IService1/AddMascaraResponse")]
-        System.Threading.Tasks.Task AddMascaraAsync(Dal.ServiceReference1.MascaraWCF mascaraWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddLipstick", ReplyAction="http://tempuri.org/IService1/AddLipstickResponse")]
-        void AddLipstick(Dal.ServiceReference1.LipstickWCF lipstickWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddLipstick", ReplyAction="http://tempuri.org/IService1/AddLipstickResponse")]
-        System.Threading.Tasks.Task AddLipstickAsync(Dal.ServiceReference1.LipstickWCF lipstickWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTop", ReplyAction="http://tempuri.org/IService1/AddTopResponse")]
-        void AddTop(Dal.ServiceReference1.NailTopWCF nailTopWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddTop", ReplyAction="http://tempuri.org/IService1/AddTopResponse")]
-        System.Threading.Tasks.Task AddTopAsync(Dal.ServiceReference1.NailTopWCF nailTopWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddBase", ReplyAction="http://tempuri.org/IService1/AddBaseResponse")]
-        void AddBase(Dal.ServiceReference1.NailBaseWCF nailBaseWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddBase", ReplyAction="http://tempuri.org/IService1/AddBaseResponse")]
-        System.Threading.Tasks.Task AddBaseAsync(Dal.ServiceReference1.NailBaseWCF nailBaseWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddPolish", ReplyAction="http://tempuri.org/IService1/AddPolishResponse")]
-        void AddPolish(Dal.ServiceReference1.NailPolishWCF nailPolishWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddPolish", ReplyAction="http://tempuri.org/IService1/AddPolishResponse")]
-        System.Threading.Tasks.Task AddPolishAsync(Dal.ServiceReference1.NailPolishWCF nailPolishWCF);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddMaterials", ReplyAction="http://tempuri.org/IService1/AddMaterialsResponse")]
+        System.Threading.Tasks.Task AddMaterialsAsync(Dal.ServiceReference1.MaterialsWCF materialsWCF);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetChangedQuantity", ReplyAction="http://tempuri.org/IService1/GetChangedQuantityResponse")]
         void GetChangedQuantity(int QuantityBottles, double QuantityGeneralVolume, int id);
@@ -1000,77 +993,17 @@ namespace Dal.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetChangedQuantity", ReplyAction="http://tempuri.org/IService1/GetChangedQuantityResponse")]
         System.Threading.Tasks.Task GetChangedQuantityAsync(int QuantityBottles, double QuantityGeneralVolume, int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateShampoo", ReplyAction="http://tempuri.org/IService1/UpdateShampooResponse")]
-        void UpdateShampoo(Dal.ServiceReference1.ShampooWCF shampooWCF);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateMaterials", ReplyAction="http://tempuri.org/IService1/UpdateMaterialsResponse")]
+        void UpdateMaterials(Dal.ServiceReference1.MaterialsWCF materialsWCF);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateShampoo", ReplyAction="http://tempuri.org/IService1/UpdateShampooResponse")]
-        System.Threading.Tasks.Task UpdateShampooAsync(Dal.ServiceReference1.ShampooWCF shampooWCF);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateMaterials", ReplyAction="http://tempuri.org/IService1/UpdateMaterialsResponse")]
+        System.Threading.Tasks.Task UpdateMaterialsAsync(Dal.ServiceReference1.MaterialsWCF materialsWCF);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateBalsam", ReplyAction="http://tempuri.org/IService1/UpdateBalsamResponse")]
-        void UpdateBalsam(Dal.ServiceReference1.BalsamWCF balsamWCF);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetLoggs", ReplyAction="http://tempuri.org/IService1/GetLoggsResponse")]
+        Dal.ServiceReference1.InfoWCF[] GetLoggs();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateBalsam", ReplyAction="http://tempuri.org/IService1/UpdateBalsamResponse")]
-        System.Threading.Tasks.Task UpdateBalsamAsync(Dal.ServiceReference1.BalsamWCF balsamWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateColor", ReplyAction="http://tempuri.org/IService1/UpdateColorResponse")]
-        void UpdateColor(Dal.ServiceReference1.ColorWCF colorWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateColor", ReplyAction="http://tempuri.org/IService1/UpdateColorResponse")]
-        System.Threading.Tasks.Task UpdateColorAsync(Dal.ServiceReference1.ColorWCF colorWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateLaque", ReplyAction="http://tempuri.org/IService1/UpdateLaqueResponse")]
-        void UpdateLaque(Dal.ServiceReference1.LaqueWCF laqueWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateLaque", ReplyAction="http://tempuri.org/IService1/UpdateLaqueResponse")]
-        System.Threading.Tasks.Task UpdateLaqueAsync(Dal.ServiceReference1.LaqueWCF laqueWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateFoundation", ReplyAction="http://tempuri.org/IService1/UpdateFoundationResponse")]
-        void UpdateFoundation(Dal.ServiceReference1.FoundationWCF foundationWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateFoundation", ReplyAction="http://tempuri.org/IService1/UpdateFoundationResponse")]
-        System.Threading.Tasks.Task UpdateFoundationAsync(Dal.ServiceReference1.FoundationWCF foundationWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePowder", ReplyAction="http://tempuri.org/IService1/UpdatePowderResponse")]
-        void UpdatePowder(Dal.ServiceReference1.PowderWCF powderWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePowder", ReplyAction="http://tempuri.org/IService1/UpdatePowderResponse")]
-        System.Threading.Tasks.Task UpdatePowderAsync(Dal.ServiceReference1.PowderWCF powderWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateShadow", ReplyAction="http://tempuri.org/IService1/UpdateShadowResponse")]
-        void UpdateShadow(Dal.ServiceReference1.ShadowsWCF shadowsWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateShadow", ReplyAction="http://tempuri.org/IService1/UpdateShadowResponse")]
-        System.Threading.Tasks.Task UpdateShadowAsync(Dal.ServiceReference1.ShadowsWCF shadowsWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateMascara", ReplyAction="http://tempuri.org/IService1/UpdateMascaraResponse")]
-        void UpdateMascara(Dal.ServiceReference1.MascaraWCF mascaraWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateMascara", ReplyAction="http://tempuri.org/IService1/UpdateMascaraResponse")]
-        System.Threading.Tasks.Task UpdateMascaraAsync(Dal.ServiceReference1.MascaraWCF mascaraWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateLipstick", ReplyAction="http://tempuri.org/IService1/UpdateLipstickResponse")]
-        void UpdateLipstick(Dal.ServiceReference1.LipstickWCF lipstickWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateLipstick", ReplyAction="http://tempuri.org/IService1/UpdateLipstickResponse")]
-        System.Threading.Tasks.Task UpdateLipstickAsync(Dal.ServiceReference1.LipstickWCF lipstickWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateTop", ReplyAction="http://tempuri.org/IService1/UpdateTopResponse")]
-        void UpdateTop(Dal.ServiceReference1.NailTopWCF nailTopWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateTop", ReplyAction="http://tempuri.org/IService1/UpdateTopResponse")]
-        System.Threading.Tasks.Task UpdateTopAsync(Dal.ServiceReference1.NailTopWCF nailTopWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateBase", ReplyAction="http://tempuri.org/IService1/UpdateBaseResponse")]
-        void UpdateBase(Dal.ServiceReference1.NailBaseWCF nailBaseWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateBase", ReplyAction="http://tempuri.org/IService1/UpdateBaseResponse")]
-        System.Threading.Tasks.Task UpdateBaseAsync(Dal.ServiceReference1.NailBaseWCF nailBaseWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePolish", ReplyAction="http://tempuri.org/IService1/UpdatePolishResponse")]
-        void UpdatePolish(Dal.ServiceReference1.NailPolishWCF nailPolishWCF);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePolish", ReplyAction="http://tempuri.org/IService1/UpdatePolishResponse")]
-        System.Threading.Tasks.Task UpdatePolishAsync(Dal.ServiceReference1.NailPolishWCF nailPolishWCF);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetLoggs", ReplyAction="http://tempuri.org/IService1/GetLoggsResponse")]
+        System.Threading.Tasks.Task<Dal.ServiceReference1.InfoWCF[]> GetLoggsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1132,100 +1065,12 @@ namespace Dal.ServiceReference1 {
             return base.Channel.GetListPositionsAsync();
         }
         
-        public Dal.ServiceReference1.BalsamWCF[] GetListBalsam() {
-            return base.Channel.GetListBalsam();
+        public Dal.ServiceReference1.MaterialsWCF[] GetListMaterials() {
+            return base.Channel.GetListMaterials();
         }
         
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.BalsamWCF[]> GetListBalsamAsync() {
-            return base.Channel.GetListBalsamAsync();
-        }
-        
-        public Dal.ServiceReference1.ShampooWCF[] GetListShampoo() {
-            return base.Channel.GetListShampoo();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.ShampooWCF[]> GetListShampooAsync() {
-            return base.Channel.GetListShampooAsync();
-        }
-        
-        public Dal.ServiceReference1.LaqueWCF[] GetListLaque() {
-            return base.Channel.GetListLaque();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.LaqueWCF[]> GetListLaqueAsync() {
-            return base.Channel.GetListLaqueAsync();
-        }
-        
-        public Dal.ServiceReference1.ColorWCF[] GetListColor() {
-            return base.Channel.GetListColor();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.ColorWCF[]> GetListColorAsync() {
-            return base.Channel.GetListColorAsync();
-        }
-        
-        public Dal.ServiceReference1.FoundationWCF[] GetListFoundation() {
-            return base.Channel.GetListFoundation();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.FoundationWCF[]> GetListFoundationAsync() {
-            return base.Channel.GetListFoundationAsync();
-        }
-        
-        public Dal.ServiceReference1.PowderWCF[] GetListPowder() {
-            return base.Channel.GetListPowder();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.PowderWCF[]> GetListPowderAsync() {
-            return base.Channel.GetListPowderAsync();
-        }
-        
-        public Dal.ServiceReference1.ShadowsWCF[] GetListShadow() {
-            return base.Channel.GetListShadow();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.ShadowsWCF[]> GetListShadowAsync() {
-            return base.Channel.GetListShadowAsync();
-        }
-        
-        public Dal.ServiceReference1.MascaraWCF[] GetListMascara() {
-            return base.Channel.GetListMascara();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.MascaraWCF[]> GetListMascaraAsync() {
-            return base.Channel.GetListMascaraAsync();
-        }
-        
-        public Dal.ServiceReference1.LipstickWCF[] GetListLipstick() {
-            return base.Channel.GetListLipstick();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.LipstickWCF[]> GetListLipstickAsync() {
-            return base.Channel.GetListLipstickAsync();
-        }
-        
-        public Dal.ServiceReference1.NailTopWCF[] GetListTop() {
-            return base.Channel.GetListTop();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.NailTopWCF[]> GetListTopAsync() {
-            return base.Channel.GetListTopAsync();
-        }
-        
-        public Dal.ServiceReference1.NailBaseWCF[] GetListBase() {
-            return base.Channel.GetListBase();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.NailBaseWCF[]> GetListBaseAsync() {
-            return base.Channel.GetListBaseAsync();
-        }
-        
-        public Dal.ServiceReference1.NailPolishWCF[] GetListPolish() {
-            return base.Channel.GetListPolish();
-        }
-        
-        public System.Threading.Tasks.Task<Dal.ServiceReference1.NailPolishWCF[]> GetListPolishAsync() {
-            return base.Channel.GetListPolishAsync();
+        public System.Threading.Tasks.Task<Dal.ServiceReference1.MaterialsWCF[]> GetListMaterialsAsync() {
+            return base.Channel.GetListMaterialsAsync();
         }
         
         public void DeleteProduct(int id) {
@@ -1260,100 +1105,12 @@ namespace Dal.ServiceReference1 {
             return base.Channel.AddEmployeeAsync(staffWCF);
         }
         
-        public void AddShampoo(Dal.ServiceReference1.ShampooWCF shampooWCF) {
-            base.Channel.AddShampoo(shampooWCF);
+        public void AddMaterials(Dal.ServiceReference1.MaterialsWCF materialsWCF) {
+            base.Channel.AddMaterials(materialsWCF);
         }
         
-        public System.Threading.Tasks.Task AddShampooAsync(Dal.ServiceReference1.ShampooWCF shampooWCF) {
-            return base.Channel.AddShampooAsync(shampooWCF);
-        }
-        
-        public void AddBalsam(Dal.ServiceReference1.BalsamWCF balsamWCF) {
-            base.Channel.AddBalsam(balsamWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddBalsamAsync(Dal.ServiceReference1.BalsamWCF balsamWCF) {
-            return base.Channel.AddBalsamAsync(balsamWCF);
-        }
-        
-        public void AddColor(Dal.ServiceReference1.ColorWCF colorWCF) {
-            base.Channel.AddColor(colorWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddColorAsync(Dal.ServiceReference1.ColorWCF colorWCF) {
-            return base.Channel.AddColorAsync(colorWCF);
-        }
-        
-        public void AddLaque(Dal.ServiceReference1.LaqueWCF laqueWCF) {
-            base.Channel.AddLaque(laqueWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddLaqueAsync(Dal.ServiceReference1.LaqueWCF laqueWCF) {
-            return base.Channel.AddLaqueAsync(laqueWCF);
-        }
-        
-        public void AddFoundation(Dal.ServiceReference1.FoundationWCF foundationWCF) {
-            base.Channel.AddFoundation(foundationWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddFoundationAsync(Dal.ServiceReference1.FoundationWCF foundationWCF) {
-            return base.Channel.AddFoundationAsync(foundationWCF);
-        }
-        
-        public void AddPowder(Dal.ServiceReference1.PowderWCF powderWCF) {
-            base.Channel.AddPowder(powderWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddPowderAsync(Dal.ServiceReference1.PowderWCF powderWCF) {
-            return base.Channel.AddPowderAsync(powderWCF);
-        }
-        
-        public void AddShadow(Dal.ServiceReference1.ShadowsWCF shadowsWCF) {
-            base.Channel.AddShadow(shadowsWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddShadowAsync(Dal.ServiceReference1.ShadowsWCF shadowsWCF) {
-            return base.Channel.AddShadowAsync(shadowsWCF);
-        }
-        
-        public void AddMascara(Dal.ServiceReference1.MascaraWCF mascaraWCF) {
-            base.Channel.AddMascara(mascaraWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddMascaraAsync(Dal.ServiceReference1.MascaraWCF mascaraWCF) {
-            return base.Channel.AddMascaraAsync(mascaraWCF);
-        }
-        
-        public void AddLipstick(Dal.ServiceReference1.LipstickWCF lipstickWCF) {
-            base.Channel.AddLipstick(lipstickWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddLipstickAsync(Dal.ServiceReference1.LipstickWCF lipstickWCF) {
-            return base.Channel.AddLipstickAsync(lipstickWCF);
-        }
-        
-        public void AddTop(Dal.ServiceReference1.NailTopWCF nailTopWCF) {
-            base.Channel.AddTop(nailTopWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddTopAsync(Dal.ServiceReference1.NailTopWCF nailTopWCF) {
-            return base.Channel.AddTopAsync(nailTopWCF);
-        }
-        
-        public void AddBase(Dal.ServiceReference1.NailBaseWCF nailBaseWCF) {
-            base.Channel.AddBase(nailBaseWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddBaseAsync(Dal.ServiceReference1.NailBaseWCF nailBaseWCF) {
-            return base.Channel.AddBaseAsync(nailBaseWCF);
-        }
-        
-        public void AddPolish(Dal.ServiceReference1.NailPolishWCF nailPolishWCF) {
-            base.Channel.AddPolish(nailPolishWCF);
-        }
-        
-        public System.Threading.Tasks.Task AddPolishAsync(Dal.ServiceReference1.NailPolishWCF nailPolishWCF) {
-            return base.Channel.AddPolishAsync(nailPolishWCF);
+        public System.Threading.Tasks.Task AddMaterialsAsync(Dal.ServiceReference1.MaterialsWCF materialsWCF) {
+            return base.Channel.AddMaterialsAsync(materialsWCF);
         }
         
         public void GetChangedQuantity(int QuantityBottles, double QuantityGeneralVolume, int id) {
@@ -1364,100 +1121,20 @@ namespace Dal.ServiceReference1 {
             return base.Channel.GetChangedQuantityAsync(QuantityBottles, QuantityGeneralVolume, id);
         }
         
-        public void UpdateShampoo(Dal.ServiceReference1.ShampooWCF shampooWCF) {
-            base.Channel.UpdateShampoo(shampooWCF);
+        public void UpdateMaterials(Dal.ServiceReference1.MaterialsWCF materialsWCF) {
+            base.Channel.UpdateMaterials(materialsWCF);
         }
         
-        public System.Threading.Tasks.Task UpdateShampooAsync(Dal.ServiceReference1.ShampooWCF shampooWCF) {
-            return base.Channel.UpdateShampooAsync(shampooWCF);
+        public System.Threading.Tasks.Task UpdateMaterialsAsync(Dal.ServiceReference1.MaterialsWCF materialsWCF) {
+            return base.Channel.UpdateMaterialsAsync(materialsWCF);
         }
         
-        public void UpdateBalsam(Dal.ServiceReference1.BalsamWCF balsamWCF) {
-            base.Channel.UpdateBalsam(balsamWCF);
+        public Dal.ServiceReference1.InfoWCF[] GetLoggs() {
+            return base.Channel.GetLoggs();
         }
         
-        public System.Threading.Tasks.Task UpdateBalsamAsync(Dal.ServiceReference1.BalsamWCF balsamWCF) {
-            return base.Channel.UpdateBalsamAsync(balsamWCF);
-        }
-        
-        public void UpdateColor(Dal.ServiceReference1.ColorWCF colorWCF) {
-            base.Channel.UpdateColor(colorWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateColorAsync(Dal.ServiceReference1.ColorWCF colorWCF) {
-            return base.Channel.UpdateColorAsync(colorWCF);
-        }
-        
-        public void UpdateLaque(Dal.ServiceReference1.LaqueWCF laqueWCF) {
-            base.Channel.UpdateLaque(laqueWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateLaqueAsync(Dal.ServiceReference1.LaqueWCF laqueWCF) {
-            return base.Channel.UpdateLaqueAsync(laqueWCF);
-        }
-        
-        public void UpdateFoundation(Dal.ServiceReference1.FoundationWCF foundationWCF) {
-            base.Channel.UpdateFoundation(foundationWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateFoundationAsync(Dal.ServiceReference1.FoundationWCF foundationWCF) {
-            return base.Channel.UpdateFoundationAsync(foundationWCF);
-        }
-        
-        public void UpdatePowder(Dal.ServiceReference1.PowderWCF powderWCF) {
-            base.Channel.UpdatePowder(powderWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdatePowderAsync(Dal.ServiceReference1.PowderWCF powderWCF) {
-            return base.Channel.UpdatePowderAsync(powderWCF);
-        }
-        
-        public void UpdateShadow(Dal.ServiceReference1.ShadowsWCF shadowsWCF) {
-            base.Channel.UpdateShadow(shadowsWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateShadowAsync(Dal.ServiceReference1.ShadowsWCF shadowsWCF) {
-            return base.Channel.UpdateShadowAsync(shadowsWCF);
-        }
-        
-        public void UpdateMascara(Dal.ServiceReference1.MascaraWCF mascaraWCF) {
-            base.Channel.UpdateMascara(mascaraWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateMascaraAsync(Dal.ServiceReference1.MascaraWCF mascaraWCF) {
-            return base.Channel.UpdateMascaraAsync(mascaraWCF);
-        }
-        
-        public void UpdateLipstick(Dal.ServiceReference1.LipstickWCF lipstickWCF) {
-            base.Channel.UpdateLipstick(lipstickWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateLipstickAsync(Dal.ServiceReference1.LipstickWCF lipstickWCF) {
-            return base.Channel.UpdateLipstickAsync(lipstickWCF);
-        }
-        
-        public void UpdateTop(Dal.ServiceReference1.NailTopWCF nailTopWCF) {
-            base.Channel.UpdateTop(nailTopWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateTopAsync(Dal.ServiceReference1.NailTopWCF nailTopWCF) {
-            return base.Channel.UpdateTopAsync(nailTopWCF);
-        }
-        
-        public void UpdateBase(Dal.ServiceReference1.NailBaseWCF nailBaseWCF) {
-            base.Channel.UpdateBase(nailBaseWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdateBaseAsync(Dal.ServiceReference1.NailBaseWCF nailBaseWCF) {
-            return base.Channel.UpdateBaseAsync(nailBaseWCF);
-        }
-        
-        public void UpdatePolish(Dal.ServiceReference1.NailPolishWCF nailPolishWCF) {
-            base.Channel.UpdatePolish(nailPolishWCF);
-        }
-        
-        public System.Threading.Tasks.Task UpdatePolishAsync(Dal.ServiceReference1.NailPolishWCF nailPolishWCF) {
-            return base.Channel.UpdatePolishAsync(nailPolishWCF);
+        public System.Threading.Tasks.Task<Dal.ServiceReference1.InfoWCF[]> GetLoggsAsync() {
+            return base.Channel.GetLoggsAsync();
         }
     }
 }

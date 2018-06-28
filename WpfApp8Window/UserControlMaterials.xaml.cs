@@ -572,7 +572,7 @@ namespace WpfApp8Window
                     {
                         if (quantityToBuy.Value != null)
                         {
-                            Materials materials = ((item as TabItem).Content as DataGrid).SelectedItem as Materials;
+                            Material materials = ((item as TabItem).Content as DataGrid).SelectedItem as Material;
                             int Id = materials.Id;
                             double quantityGeneral = materials.QuantityGeneralVolume + (materials.Volume * (double)quantityToBuy.Value);
                             int quantityBottles = materials.QuantityBottles + (int)quantityToBuy.Value;
@@ -589,7 +589,7 @@ namespace WpfApp8Window
             {
                 if ((item as TabItem).IsSelected)
                 {
-                    deleteFunction.DeleteProduct((((item as TabItem).Content as DataGrid).SelectedItem as Materials).Id);
+                    deleteFunction.DeleteProduct((((item as TabItem).Content as DataGrid).SelectedItem as Material).Id);
                     load(null, null);
                 }
             }

@@ -12,6 +12,6 @@ namespace Dal
         public int Id { get; set; }
         [Required]
         public int UsedQuantity { get; set; }
-        public virtual Materials Material { get; set; }
+        public virtual Material Material { get; set; }
     }
 }

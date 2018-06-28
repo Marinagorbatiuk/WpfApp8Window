@@ -62,57 +62,57 @@ namespace WpfApp8Window
 
             if (ShampooGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(ShampooGrid.SelectedItem as Materials);
+                WritingDownMaterials(ShampooGrid.SelectedItem as Material);
             }
             if (BalsamGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(BalsamGrid.SelectedItem as Materials);
+                WritingDownMaterials(BalsamGrid.SelectedItem as Material);
             }
             if (ColorGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(ColorGrid.SelectedItem as Materials);
+                WritingDownMaterials(ColorGrid.SelectedItem as Material);
             }
             if (LaqueGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(LaqueGrid.SelectedItem as Materials);
+                WritingDownMaterials(LaqueGrid.SelectedItem as Material);
             }
             if (FoundationGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(FoundationGrid.SelectedItem as Materials);
+                WritingDownMaterials(FoundationGrid.SelectedItem as Material);
             }
             if (PowderGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(PowderGrid.SelectedItem as Materials);
+                WritingDownMaterials(PowderGrid.SelectedItem as Material);
             }
             if (ShadowGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(ShadowGrid.SelectedItem as Materials);
+                WritingDownMaterials(ShadowGrid.SelectedItem as Material);
             }
             if (MascaraGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(MascaraGrid.SelectedItem as Materials);
+                WritingDownMaterials(MascaraGrid.SelectedItem as Material);
             }
             if (LipstickGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(LipstickGrid.SelectedItem as Materials);
+                WritingDownMaterials(LipstickGrid.SelectedItem as Material);
             }
             if (BaseGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(BaseGrid.SelectedItem as Materials);
+                WritingDownMaterials(BaseGrid.SelectedItem as Material);
             }
             if (PolishGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(PolishGrid.SelectedItem as Materials);
+                WritingDownMaterials(PolishGrid.SelectedItem as Material);
             }
             if (TopGrid.SelectedIndex > -1)
             {
-                WritingDownMaterials(TopGrid.SelectedItem as Materials);
+                WritingDownMaterials(TopGrid.SelectedItem as Material);
             }
             CleanGrid();
             MaterialsToOrder.ItemsSource = null;
             MaterialsToOrder.ItemsSource = materialsWritingoff;
         }
-        private void WritingDownMaterials(Materials material)
+        private void WritingDownMaterials(Material material)
         {
 
             WriteOffMaterials offMaterials = materialsWritingoff.FirstOrDefault(x => x.Material.Id == material.Id);

@@ -8,6 +8,19 @@ namespace Dal
 {
     class Convertation
     {
+        public static Info ConvertToBllInfo(InfoWCF info)
+        {
+            return new Info
+            {
+                id = info.id,
+                Action = info.Action,
+                ActionTime = info.ActionTime,
+                InputParameters = info.InputParameters,
+                OutputParameters = info.OutputParameters,
+                Login = info.Login
+            };
+        }
+
         public static Staff ConvertStaffToDal(StaffWCF wcfStaff)
         {
             Staff staff = new Staff()
@@ -78,7 +91,7 @@ namespace Dal
                 Name = wcfServices.Name,
                 Price = wcfServices.Price,
                 Id = wcfServices.Id,
-                //  Materials=bllServices.BllMaterials
+                //  Material=bllServices.BllMaterials
             };
             return service;
         }
@@ -91,7 +104,7 @@ namespace Dal
             };
             return writeOffMaterial;
         }
-        public static MaterialsWCF ConvertMaterialsToDB(Materials tmpMaterial)
+        public static MaterialsWCF ConvertMaterialsToDB(Material tmpMaterial)
         {
             MaterialsWCF getmaterial = null;
             if (tmpMaterial is Balsam)
@@ -533,9 +546,9 @@ namespace Dal
             };
             return shampoo;
         }
-        public static Materials ConvertWcfMaterials(MaterialsWCF tmpMaterial)
+        public static Material ConvertWcfMaterials(MaterialsWCF tmpMaterial)
         {
-            Materials getmaterial = null;
+            Material getmaterial = null;
             if (tmpMaterial is BalsamWCF)
             {
                 getmaterial = ConvertBalsamToDAL(tmpMaterial as BalsamWCF);

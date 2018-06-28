@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal
 {
-    public class Materials
+    public class Material
     {
         public int Id { get; set; }
         [Required]
@@ -22,57 +22,56 @@ namespace Dal
         public int QuantityBottles { get; set; }
         [Required]
         public double QuantityGeneralVolume { get; set; }
-        // public string Description { get; set; }
-        // public string Color { get; set; }
+
         public virtual ICollection<Services> Service { get; set; }
         [Required]
         public double QuntityCount { get; set; }
     }
 
 
-    public class Shampoo : Materials
+    public class Shampoo : Material
     {
         public string Description { get; set; }
     }
-    public class Balsam : Materials { }
-    public class HairColor : Materials
-    {
-        public string Description { get; set; }
-        [Required]
-        public string Color { get; set; }
-    }
-    public class Laque : Materials { }
-    public class Lipstick : Materials
+    public class Balsam : Material { }
+    public class HairColor : Material
     {
         public string Description { get; set; }
         [Required]
         public string Color { get; set; }
     }
-    public class Mascara : Materials
-    {
-        public string Color { get; set; }
-    }
-    public class Foundation : Materials
+    public class Laque : Material { }
+    public class Lipstick : Material
     {
         public string Description { get; set; }
         [Required]
         public string Color { get; set; }
     }
-    public class Powder : Materials
+    public class Mascara : Material
+    {
+        public string Color { get; set; }
+    }
+    public class Foundation : Material
+    {
+        public string Description { get; set; }
+        [Required]
+        public string Color { get; set; }
+    }
+    public class Powder : Material
     {
         [Required]
         public string Color { get; set; }
     }
-    public class Shadows : Materials
+    public class Shadows : Material
     {
         [Required]
         public string Color { get; set; }
     }
-    public class NailPolish : Materials
+    public class NailPolish : Material
     {
         public string Color { get; set; }
     }
-    public class NailTop : Materials { }
-    public class NailBase : Materials { }
+    public class NailTop : Material { }
+    public class NailBase : Material { }
 
 }

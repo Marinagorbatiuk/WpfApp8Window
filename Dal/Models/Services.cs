@@ -14,7 +14,7 @@ namespace Dal
         public string Name { get; set; }
         [Required]
         public decimal Price { get; set; }
-        public virtual ICollection<Materials> Materials { get; set; }
+        public virtual ICollection<Material> Materials { get; set; }
 
     }
 }

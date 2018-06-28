@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp8Window"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             Loaded="load"
+             >
     <Grid >
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -27,11 +29,15 @@
         </Grid.RowDefinitions>
         <TabControl Grid.Column="1" Grid.Row="1"  x:Name="Action">
             <TabItem Header="Operations">
-                <DataGrid>
+                <DataGrid x:Name="operations" AutoGenerateColumns="False" IsReadOnly="True" >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Work Position"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Login"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Acts" ></DataGridTextColumn>
+    
+                        <DataGridTextColumn Header="Login" Binding="{Binding Login}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Acts" Binding="{Binding Action }"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Date" Binding= "{Binding ActionTime}" ></DataGridTextColumn>
+                        <DataGridTextColumn Header="Inputed info" Binding= "{Binding InputParameters}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Result" Binding= "{Binding OutputParameters}" ></DataGridTextColumn>
+                       
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>

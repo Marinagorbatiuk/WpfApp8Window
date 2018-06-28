@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Dal;
 namespace WpfApp8Window
 {
     /// <summary>
@@ -20,9 +20,17 @@ namespace WpfApp8Window
     /// </summary>
     public partial class Actions : UserControl
     {
+        GetFunction getFunction = new GetFunction();
+
         public Actions()
         {
             InitializeComponent();
+        }
+
+        private void load(object sender, RoutedEventArgs e)
+        {
+            operations.ItemsSource = getFunction.GetLoggs();
+
         }
     }
 }
