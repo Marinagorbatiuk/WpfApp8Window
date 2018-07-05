@@ -26,6 +26,8 @@ namespace Dal
         public virtual ICollection<Services> Service { get; set; }
         [Required]
         public double QuntityCount { get; set; }
+     //   public string Description { get; set; }
+       // public string Color { get; set; }
     }
 
 

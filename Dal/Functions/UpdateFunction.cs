@@ -15,53 +15,6 @@ namespace Dal
             client.UpdateMaterials(Convertation.ConvertMaterialsToDB(materials));
         }
         
-        //public void UpdateShampoo(Shampoo Shampoo)
-        //{
-        //    client.UpdateShampoo(Convertation.ConvertShampoToWcf(Shampoo));
-        //}
-        //public void UpdateBalsam(Balsam Balsam)
-        //{
-        //    client.UpdateBalsam(Convertation.ConvertBalsamToWCF(Balsam));
-        //}
-        //public void UpdateLaque(Laque Laque)
-        //{
-        //    client.UpdateLaque(Convertation.ConvertLaqueToWCF(Laque));
-        //}
-        //public void UpdateColor(HairColor Color)
-        //{
-        //    client.UpdateColor(Convertation.ConvertColorToWCF(Color));
-        //}
-        //public void UpdateFoundation(Foundation Foundation)
-        //{
-        //    client.UpdateFoundation(Convertation.ConvertFoundationToWCF(Foundation));
-        //}
-        //public void UpdatePowder(Powder Powder)
-        //{
-        //    client.UpdatePowder(Convertation.ConvertPowderToWCf(Powder));
-        //}
-        //public void UpdateShadow(Shadows Shadows)
-        //{
-        //    client.UpdateShadow(Convertation.ConvertShadowToWCF(Shadows));
-        //}
-        //public void UpdateMascara(Mascara Mascara)
-        //{
-        //    client.UpdateMascara(Convertation.ConvertMascaraToWCF(Mascara));
-        //}
-        //public void UpdateLipstick(Lipstick Lipstick)
-        //{
-        //    client.UpdateLipstick(Convertation.ConvertLipstickToWCF(Lipstick));
-        //}
-        //public void UpdateNailBase(NailBase NailBase)
-        //{
-        //    client.UpdateBase(Convertation.ConvertBaseToWCf(NailBase));
-        //}
-        //public void UpdatePolish(NailPolish NailPolish)
-        //{
-        //    client.UpdatePolish(Convertation.ConvertPolishToWCF(NailPolish));
-        //}
-        //public void UpdateTop(NailTop NailTop)
-        //{
-        //    client.UpdateTop(Convertation.ConvertTopTOWcf(NailTop));
-        //}
+       
     }
 }

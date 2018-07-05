@@ -111,9 +111,9 @@ namespace Dal
             {
                 getmaterial = ConvertBalsamToWCF(tmpMaterial as Balsam);
             }
-            else if (tmpMaterial is Shadows)
+            else if (tmpMaterial is Shampoo)
             {
-                getmaterial = ConvertShadowToWCF(tmpMaterial as Shadows);
+                getmaterial = ConvertShampoToWcf(tmpMaterial as Shampoo);
             }
             else if (tmpMaterial is Laque)
             {

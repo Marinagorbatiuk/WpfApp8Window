@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Convertation.cs" />
     <Compile Include="Functions\AddFunction.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -30,32 +30,34 @@ namespace WpfApp8Window
         }
         private void load(object sender, RoutedEventArgs e)
         {
+            var Materials = getFunction.GetMaterials();
+
             MaterialsToOrder.ItemsSource = null;
             MaterialsToOrder.ItemsSource = materialsWritingoff;
             ShampooGrid.ItemsSource = null;
-            ShampooGrid.ItemsSource = getFunction.GetListShampoo();
+            ShampooGrid.ItemsSource = Materials.Where(x=>x is Shampoo);
             BalsamGrid.ItemsSource = null;
-            BalsamGrid.ItemsSource = getFunction.GetListBalsam();
+            BalsamGrid.ItemsSource = Materials.Where(x => x is Balsam);
             LaqueGrid.ItemsSource = null;
-            LaqueGrid.ItemsSource = getFunction.GetListLaque();
+            LaqueGrid.ItemsSource = Materials.Where(x => x is Laque);
             ColorGrid.ItemsSource = null;
-            ColorGrid.ItemsSource = getFunction.GetListColor();
+            ColorGrid.ItemsSource = Materials.Where(x => x is HairColor);
             FoundationGrid.ItemsSource = null;
-            FoundationGrid.ItemsSource = getFunction.GetListFoundation();
+            FoundationGrid.ItemsSource = Materials.Where(x => x is Foundation);
             PowderGrid.ItemsSource = null;
-            PowderGrid.ItemsSource = getFunction.GetListPowder();
+            PowderGrid.ItemsSource = Materials.Where(x => x is Powder);
             ShadowGrid.ItemsSource = null;
-            ShadowGrid.ItemsSource = getFunction.GetListShadow();
+            ShadowGrid.ItemsSource = Materials.Where(x => x is Shadows);
             MascaraGrid.ItemsSource = null;
-            MascaraGrid.ItemsSource = getFunction.GetListMascara();
+            MascaraGrid.ItemsSource = Materials.Where(x => x is Mascara);
             LipstickGrid.ItemsSource = null;
-            LipstickGrid.ItemsSource = getFunction.GetListLipstick();
+            LipstickGrid.ItemsSource = Materials.Where(x => x is Lipstick);
             TopGrid.ItemsSource = null;
-            TopGrid.ItemsSource = getFunction.GetListNailTop();
+            TopGrid.ItemsSource = Materials.Where(x => x is NailTop);
             BaseGrid.ItemsSource = null;
-            BaseGrid.ItemsSource = getFunction.GetListNailBase();
+            BaseGrid.ItemsSource = Materials.Where(x => x is NailBase);
             PolishGrid.ItemsSource = null;
-            PolishGrid.ItemsSource = getFunction.GetListNailPolish();
+            PolishGrid.ItemsSource = Materials.Where(x => x is NailPolish);
         }
         private void OkClick(object sender, RoutedEventArgs e)
         {           
@@ -211,6 +213,7 @@ namespace WpfApp8Window
             ColorGrid.IsEnabled = false;
             TopGrid.IsEnabled = false;
             BaseGrid.IsEnabled = false;
+            PolishGrid.IsEnabled = false;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
